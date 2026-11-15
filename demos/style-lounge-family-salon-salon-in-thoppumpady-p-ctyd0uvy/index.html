@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Lounge Family Salon | Luxury Salon in Kochi</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg: #141414;
+      --surface: #1E1E1E;
+      --text: #F8FAFC;
+      --accent: #D97706;
+      --border: rgba(255, 255, 255, 0.10);
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Syne', sans-serif;
+      letter-spacing: -0.02em;
+    }
+    .border-custom {
+      border: 1px solid var(--border);
+    }
+    .divide-custom > * + * {
+      border-color: var(--border);
+    }
+    .bg-surface {
+      background-color: var(--surface);
+    }
+    .text-accent {
+      color: var(--accent);
+    }
+    .bg-accent {
+      background-color: var(--accent);
+    }
+    .border-accent {
+      border-color: var(--accent);
+    }
+  </style>
+</head>
+<body class="relative min-h-screen pb-32 md:pb-24 antialiased selection:bg-[#D97706] selection:text-[#141414]">
+
+  <!-- 1. Trust Bar -->
+  <div class="border-b border-custom bg-[#141414] text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 text-stone-400 text-center md:text-left truncate max-w-full">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent shrink-0"></i>
+        <span class="truncate">Tyzen Towers, near Parippu Junction, Kazhuthumuttu, Mundamveli, Thoppumpady, Kochi</span>
+      </div>
+      <div class="flex items-center gap-4 shrink-0 text-stone-400">
+        <div class="hidden sm:flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-accent"></i>
+          <span>Mon-Fri: 10:30am–9pm | Sat-Sun: 10am–9pm</span>
+        </div>
+        <a href="tel:+919645565454" class="flex items-center gap-1.5 text-accent hover:underline font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          <span>+91 96455 65454</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Sticky Header -->
+  <header class="sticky top-0 z-30 backdrop-blur-md bg-[#141414]/90 border-b border-custom">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#" class="font-heading font-bold text-xl sm:text-2xl tracking-tight text-white flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-accent inline-block"></span>
+        STYLE LOUNGE
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-stone-300">
+        <button data-preview-page="About Us" class="preview-trigger hover:text-white transition">About Us</button>
+        <button data-preview-page="Services" class="preview-trigger hover:text-white transition">Services</button>
+        <button data-preview-page="Gallery" class="preview-trigger hover:text-white transition">Gallery</button>
+        <button data-preview-page="Pricing" class="preview-trigger hover:text-white transition">Pricing</button>
+        <button data-preview-page="Testimonials" class="preview-trigger hover:text-white transition">Testimonials</button>
+        <button data-preview-page="Contact" class="preview-trigger hover:text-white transition">Contact</button>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button onclick="toggleAssistant()" class="bg-accent text-[#141414] font-semibold text-xs sm:text-sm px-4 py-2.5 rounded hover:bg-[#b45309] transition flex items-center gap-2">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section -->
+  <section class="py-20 lg:py-28 px-4 sm:px-6 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <!-- Rating Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border-custom text-xs font-medium text-stone-300">
+          <div class="flex text-amber-500">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+          </div>
+          <span>4.9 rating across 2,543+ Google reviews</span>
+          <span class="text-stone-500">•</span>
+          <span class="text-accent">Thoppumpady, Kochi</span>
+        </div>
+
+        <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.08]">
+          Couture Styling &amp; Precision Care for the Modern Aesthetic.
+        </h1>
+
+        <p class="text-base sm:text-lg text-stone-400 max-w-xl leading-relaxed">
+          Experience bespoke hair architecture, restorative dermal treatments, and curated family grooming at Thoppumpady's premier luxury salon sanctuary.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <button onclick="toggleAssistant()" class="bg-accent text-[#141414] font-bold px-7 py-3.5 rounded hover:bg-[#b45309] transition flex items-center gap-2">
+            <span>Reserve Table or Slot</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <a href="tel:+919645565454" class="border-custom bg-surface hover:bg-[#252525] px-6 py-3.5 rounded font-medium text-stone-200 transition flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-accent"></i>
+            <span>Call Now</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual Artifice -->
+      <div class="lg:col-span-5">
+        <div class="relative bg-surface border-custom p-6 sm:p-8 rounded-2xl overflow-hidden">
+          <div class="absolute -top-16 -right-16 w-48 h-48 bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-custom pb-4">
+              <span class="text-xs uppercase tracking-widest text-stone-400">Exclusive Atelier</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">Kochi Collective</span>
+            </div>
+
+            <div class="aspect-[4/3] rounded-xl border-custom bg-[#161616] flex flex-col items-center justify-center p-6 text-center relative overflow-hidden group">
+              <div class="w-16 h-16 rounded-full bg-surface border-custom flex items-center justify-center text-accent mb-4">
+                <i data-lucide="scissors" class="w-8 h-8"></i>
+              </div>
+              <h3 class="font-heading font-semibold text-lg text-white">Artisanal Hair &amp; Spa Craft</h3>
+              <p class="text-xs text-stone-400 mt-2">Bespoke formulations, balayage perfection &amp; ritual head spas.</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <div class="p-3.5 rounded-lg bg-[#181818] border-custom">
+                <p class="text-xs text-stone-400">Master Stylists</p>
+                <p class="font-heading font-bold text-lg text-white mt-1">12+ Certified</p>
+              </div>
+              <div class="p-3.5 rounded-lg bg-[#181818] border-custom">
+                <p class="text-xs text-stone-400">Guest Experience</p>
+                <p class="font-heading font-bold text-lg text-accent mt-1">4.9 ★ Rating</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Services (Modular Bento Grid) -->
+  <section class="py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-custom">
+    <div class="max-w-2xl mb-14">
+      <div class="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-wider mb-2">
+        <span>Portfolio of Disciplines</span>
+      </div>
+      <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white">
+        Precision Beauty, Reimagined for Thoppumpady.
+      </h2>
+      <p class="text-stone-400 mt-3 text-sm sm:text-base">
+        Six bespoke salon rituals engineered with professional finesse and luxury care standards.
+      </p>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+      
+      <!-- Bento 1: Large Span -->
+      <div class="md:col-span-2 lg:col-span-2 bg-surface border-custom rounded-xl p-6 sm:p-8 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-lg bg-[#141414] border-custom flex items-center justify-center text-accent mb-6">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <span class="text-xs font-mono uppercase tracking-wider text-accent">Signature Suite</span>
+          <h3 class="font-heading font-bold text-xl sm:text-2xl text-white mt-2 mb-3">
+            Advanced Hair Design &amp; Balayage Couture
+          </h3>
+          <p class="text-stone-400 text-sm leading-relaxed mb-6">
+            Tailored structural haircuts and customized dimensional color chemistry designed to complement your bone structure and aesthetic. Our master colorists in Kochi apply non-damaging organic glosses and precision balayage.
+          </p>
+        </div>
+        <div>
+          <button data-preview-page="Advanced Hair Design" class="preview-trigger text-xs font-semibold text-accent inline-flex items-center gap-1.5 hover:underline">
+            <span>Learn More</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bento 2 -->
+      <div class="bg-surface border-custom rounded-xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-[#141414] border-custom flex items-center justify-center text-accent mb-5">
+            <i data-lucide="droplet" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg text-white mb-2">
+            Restorative Dermal Facials
+          </h3>
+          <p class="text-stone-400 text-xs leading-relaxed mb-4">
+            Custom peptide infusions and clarifying lymphatic drainage rituals for glowing epidermal vitality. Experience radiant, photo-ready skin rejuvenation.
+          </p>
+        </div>
+        <button data-preview-page="Restorative Dermal Facials" class="preview-trigger text-xs font-semibold text-accent inline-flex items-center gap-1 hover:underline">
+          <span>Learn More</span>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+      <!-- Bento 3 -->
+      <div class="bg-surface border-custom rounded-xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-[#141414] border-custom flex items-center justify-center text-accent mb-5">
+            <i data-lucide="user-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg text-white mb-2">
+            Executive &amp; Men's Grooming
+          </h3>
+          <p class="text-stone-400 text-xs leading-relaxed mb-4">
+            Traditional hot towel razor fades, precise beard tailoring, and revitalizing charcoal scalp massages. Engineered for sharp presentation.
+          </p>
+        </div>
+        <button data-preview-page="Executive Grooming" class="preview-trigger text-xs font-semibold text-accent inline-flex items-center gap-1 hover:underline">
+          <span>Learn More</span>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+      <!-- Bento 4 -->
+      <div class="bg-surface border-custom rounded-xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-[#141414] border-custom flex items-center justify-center text-accent mb-5">
+            <i data-lucide="crown" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg text-white mb-2">
+            Bridal &amp; Occasion Styling
+          </h3>
+          <p class="text-stone-400 text-xs leading-relaxed mb-4">
+            Unrivaled bridal makeup artistry, bespoke hair veil setting, and comprehensive pre-wedding packages. Complete wedding sanctuary support.
+          </p>
+        </div>
+        <button data-preview-page="Bridal Styling" class="preview-trigger text-xs font-semibold text-accent inline-flex items-center gap-1 hover:underline">
+          <span>Learn More</span>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+      <!-- Bento 5: Span 2 -->
+      <div class="md:col-span-2 lg:col-span-2 bg-surface border-custom rounded-xl p-6 sm:p-8 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-[#141414] border-custom flex items-center justify-center text-accent mb-5">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <span class="text-xs font-mono uppercase tracking-wider text-accent">Scalp Therapy</span>
+          <h3 class="font-heading font-bold text-xl text-white mt-1 mb-2">
+            Keratin &amp; Botanical Reconstruction
+          </h3>
+          <p class="text-stone-400 text-sm leading-relaxed mb-4">
+            Intensive bond repair, anti-frizz smoothing therapies, and deep cellular hydration treatments tailored for humid tropical coastal climates. Enjoy mirror-like gloss and lasting strength.
+          </p>
+        </div>
+        <button data-preview-page="Hair Reconstruction" class="preview-trigger text-xs font-semibold text-accent inline-flex items-center gap-1 hover:underline">
+          <span>Learn More</span>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+      <!-- Bento 6 -->
+      <div class="bg-surface border-custom rounded-xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-[#141414] border-custom flex items-center justify-center text-accent mb-5">
+            <i data-lucide="heart" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-lg text-white mb-2">
+            Family &amp; Junior Styling
+          </h3>
+          <p class="text-stone-400 text-xs leading-relaxed mb-4">
+            A relaxed, professional environment tailored for the entire family. Gentle styling and modern cuts for teens and young children.
+          </p>
+        </div>
+        <button data-preview-page="Family Styling" class="preview-trigger text-xs font-semibold text-accent inline-flex items-center gap-1 hover:underline">
+          <span>Learn More</span>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Trust & Proof Section -->
+  <section class="py-24 px-4 sm:px-6 max-w-7xl mx-auto border-t border-custom">
+    <!-- Proof Metrics -->
+    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x border-custom bg-surface rounded-xl overflow-hidden mb-16">
+      <div class="p-8 text-center">
+        <div class="font-heading font-extrabold text-3xl sm:text-4xl text-white">4.9 / 5.0</div>
+        <div class="flex justify-center text-amber-500 my-2">
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+        </div>
+        <p class="text-xs text-stone-400">Verified Google Rating</p>
+      </div>
+
+      <div class="p-8 text-center">
+        <div class="font-heading font-extrabold text-3xl sm:text-4xl text-accent">2,543+</div>
+        <p class="text-xs uppercase tracking-wider text-stone-300 mt-2 font-medium">Customer Reviews</p>
+        <p class="text-xs text-stone-500 mt-1">Across Thoppumpady &amp; Kochi</p>
+      </div>
+
+      <div class="p-8 text-center">
+        <div class="font-heading font-extrabold text-3xl sm:text-4xl text-white">100%</div>
+        <p class="text-xs uppercase tracking-wider text-stone-300 mt-2 font-medium">Sterilized &amp; Premium</p>
+        <p class="text-xs text-stone-500 mt-1">Hospital-grade hygiene standards</p>
+      </div>
+    </div>
+
+    <!-- Testimonials Notice & Cards -->
+    <div class="mb-14">
+      <div class="text-center mb-8">
+        <span class="text-xs text-stone-400 uppercase tracking-widest font-mono bg-surface border-custom px-3 py-1 rounded-full">
+          Sample reviews - replaced with your real Google reviews at launch
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-surface border-custom p-6 rounded-xl relative">
+          <div class="flex text-amber-500 mb-3">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+          </div>
+          <p class="text-stone-300 text-sm italic mb-4">
+            "The absolute best salon experience in Thoppumpady. Their balayage specialist worked wonders on my hair without any harsh dryness."
+          </p>
+          <div class="font-medium text-xs text-stone-200">Ananya R. — Kochi</div>
+        </div>
+
+        <div class="bg-surface border-custom p-6 rounded-xl relative">
+          <div class="flex text-amber-500 mb-3">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+          </div>
+          <p class="text-stone-300 text-sm italic mb-4">
+            "Extremely professional and clean family salon. Brought my son and husband here; the staff are polite, attentive, and very skilled."
+          </p>
+          <div class="font-medium text-xs text-stone-200">Maria Fernandez — Mundamveli</div>
+        </div>
+
+        <div class="bg-surface border-custom p-6 rounded-xl relative">
+          <div class="flex text-amber-500 mb-3">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+          </div>
+          <p class="text-stone-300 text-sm italic mb-4">
+            "Luxurious interior and top notch dermal care. Their deep hydration therapy revitalized my skin completely before my sister's wedding."
+          </p>
+          <div class="font-medium text-xs text-stone-200">Rahul K. — Thoppumpady</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location & Hours Card -->
+    <div class="bg-surface border-custom rounded-2xl p-6 sm:p-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <div class="inline-flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-wider">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Salon Sanctuary</span>
+          </div>
+          <h3 class="font-heading font-bold text-2xl text-white">Visit Our Thoppumpady Studio</h3>
+          <p class="text-stone-300 text-sm leading-relaxed">
+            1st floor, Style Lounge Family Salon, Tyzen Towers, near Parippu Junction, next to Church of God, Kazhuthumuttu, Mundamveli, Kochi, Keralam 682005
+          </p>
+          <div class="pt-2">
+            <a href="https://www.google.com/maps/search/?api=1&query=Style+Lounge+Family+Salon+Tyzen+Towers+near+Parippu+Junction+Kochi" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 bg-[#141414] border-custom hover:border-accent text-accent px-5 py-2.5 rounded-lg text-sm font-medium transition">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Get Directions on Google Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-[#141414] border-custom rounded-xl p-5 sm:p-6">
+          <div class="flex items-center gap-2 text-stone-300 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i data-lucide="clock" class="w-4 h-4 text-accent"></i>
+            <span>Verified Operating Schedule</span>
+          </div>
+          <div class="space-y-2 text-xs sm:text-sm text-stone-400 font-mono">
+            <div class="flex justify-between py-1 border-b border-custom">
+              <span>Monday – Friday</span>
+              <span class="text-white">10:30 am – 9:00 pm</span>
+            </div>
+            <div class="flex justify-between py-1">
+              <span>Saturday – Sunday</span>
+              <span class="text-white">10:00 am – 9:00 pm</span>
+            </div>
+          </div>
+          <p class="text-[11px] text-stone-500 mt-4 italic">
+            *Appointments are recommended for specialized color and bridal consultations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Quote Form Section -->
+  <section id="quote-section" class="py-24 px-4 sm:px-6 max-w-4xl mx-auto border-t border-custom scroll-mt-24">
+    <div class="bg-surface border-custom rounded-2xl p-6 sm:p-10 relative overflow-hidden">
+      <div class="max-w-xl mx-auto text-center mb-8">
+        <span class="text-xs font-semibold text-accent uppercase tracking-widest">Agency Concept Blueprint</span>
+        <h2 class="font-heading font-bold text-2xl sm:text-3xl text-white mt-2">
+          Unlock The Complete Digital Presence
+        </h2>
+        <p class="text-stone-400 text-sm mt-2">
+          Tailored proposal for Style Lounge Family Salon. Request a full custom website deployment with direct client booking.
+        </p>
+      </div>
+
+      <div id="quote-form-container">
+        <form id="quote-form" class="space-y-5">
+          <input type="hidden" name="Lead_ID" value="LEAD-CTYD0UVY">
+          <input type="hidden" name="Business_Name" value="Style Lounge Family Salon | Salon in thoppumpady | Premium salon | Luxuary salon in kochi">
+          
+          <div>
+            <label for="owner-name" class="block text-xs font-medium uppercase tracking-wider text-stone-300 mb-1.5">
+              Your Name *
+            </label>
+            <input type="text" id="owner-name" name="Owner_Name" required 
+                   placeholder="e.g. Basil Jose" 
+                   class="w-full bg-[#141414] border-custom focus:border-accent text-white px-4 py-3 rounded-lg text-sm focus:outline-none transition">
+          </div>
+
+          <div>
+            <label for="preferred-contact" class="block text-xs font-medium uppercase tracking-wider text-stone-300 mb-1.5">
+              Contact Detail *
+            </label>
+            <input type="text" id="preferred-contact" name="Preferred_Contact" required 
+                   placeholder="Phone / WhatsApp or email" 
+                   class="w-full bg-[#141414] border-custom focus:border-accent text-white px-4 py-3 rounded-lg text-sm focus:outline-none transition">
+          </div>
+
+          <div class="pt-2">
+            <span class="block text-xs font-medium uppercase tracking-wider text-stone-300 mb-3">
+              Select Package Add-ons
+            </span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-stone-300">
+              <label class="flex items-center gap-3 p-3 bg-[#141414] border-custom rounded-lg cursor-pointer hover:border-stone-500 transition">
+                <input type="checkbox" name="addons" value="Full 5-Page Custom Website" checked class="w-4 h-4 accent-[#D97706] rounded">
+                <span>Full 5-Page Custom Website</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 bg-[#141414] border-custom rounded-lg cursor-pointer hover:border-stone-500 transition">
+                <input type="checkbox" name="addons" value="WhatsApp Instant Booking Integration" checked class="w-4 h-4 accent-[#D97706] rounded">
+                <span>WhatsApp Instant Booking</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 bg-[#141414] border-custom rounded-lg cursor-pointer hover:border-stone-500 transition">
+                <input type="checkbox" name="addons" value="Custom Domain &amp; Business Email" class="w-4 h-4 accent-[#D97706] rounded">
+                <span>Custom Domain &amp; Email</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 bg-[#141414] border-custom rounded-lg cursor-pointer hover:border-stone-500 transition">
+                <input type="checkbox" name="addons" value="Local Google Maps SEO Boost" class="w-4 h-4 accent-[#D97706] rounded">
+                <span>Google Maps SEO Boost</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button type="submit" id="quote-submit-btn" class="w-full bg-accent text-[#141414] font-bold py-3.5 rounded-lg text-sm hover:bg-[#b45309] transition flex items-center justify-center gap-2">
+              <span id="btn-text">Send Me a Custom Quote</span>
+              <span id="btn-spinner" class="hidden animate-spin">
+                <i data-lucide="loader-2" class="w-4 h-4"></i>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="quote-feedback" class="hidden text-center py-6 space-y-4">
+        <!-- Replaced via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Fixed Bottom Banner -->
+  <div class="fixed bottom-0 inset-x-0 z-40 bg-[#141414]/95 backdrop-blur-md border-t border-custom px-4 py-3">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div class="text-xs text-stone-300">
+        <span class="font-medium text-white">Concept built exclusively for Style Lounge Family Salon</span> by Basil Jose. Like this look? Unlock all inner pages, your own domain and WhatsApp booking.
+      </div>
+      <button onclick="scrollToQuote()" class="shrink-0 bg-accent text-[#141414] font-semibold text-xs px-4 py-2 rounded hover:bg-[#b45309] transition whitespace-nowrap">
+        Request Full Build
+      </button>
+    </div>
+  </div>
+
+  <!-- 10. Mobile Contact Bar (Visible only < 768px) -->
+  <div class="md:hidden fixed bottom-14 inset-x-0 z-40 bg-surface/95 backdrop-blur border-t border-custom px-3 py-2">
+    <div class="grid grid-cols-2 gap-2">
+      <a href="tel:+919645565454" class="flex items-center justify-center gap-2 bg-[#141414] border-custom text-white py-2 rounded text-xs font-semibold">
+        <i data-lucide="phone" class="w-3.5 h-3.5 text-accent"></i>
+        <span>Direct Call</span>
+      </a>
+      <a href="https://wa.me/919645565454" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-accent text-[#141414] py-2 rounded text-xs font-bold">
+        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+        <span>WhatsApp Concierge</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 8. Upgrade Modal -->
+  <div id="upgrade-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden" role="dialog" aria-modal="true">
+    <div class="bg-surface border-custom rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-stone-400 hover:text-white p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="w-12 h-12 rounded-full bg-[#141414] border-custom flex items-center justify-center text-accent mb-4">
+        <i data-lucide="lock" class="w-6 h-6"></i>
+      </div>
+      <h3 id="modal-headline" class="font-heading font-bold text-xl text-white mb-4">
+        This inner page is part of the full website package.
+      </h3>
+      <p class="text-stone-300 text-xs sm:text-sm leading-relaxed mb-6">
+        Every inner route includes individualized gallery integrations, online consultation forms, and mobile SEO optimization.
+      </p>
+      <button onclick="modalScrollToQuote()" class="w-full bg-accent text-[#141414] font-bold py-3 rounded-lg text-sm hover:bg-[#b45309] transition">
+        Request Quote for Full Build
+      </button>
+    </div>
+  </div>
+
+  <!-- 9. AI Booking Assistant Launcher & Panel -->
+  <div class="fixed bottom-24 md:bottom-16 right-4 sm:right-6 z-40">
+    <!-- Round Launcher Button -->
+    <button onclick="toggleAssistant()" class="relative flex items-center gap-2.5 bg-accent text-[#141414] font-semibold text-xs py-2.5 px-3.5 rounded-full shadow-lg hover:scale-105 transition-transform" aria-label="Open AI Assistant">
+      <span class="w-2 h-2 rounded-full bg-[#141414] animate-pulse"></span>
+      <span class="hidden sm:inline font-bold">AI Concierge</span>
+      <i data-lucide="bot" class="w-4 h-4"></i>
+    </button>
+  </div>
+
+  <!-- Chat Dialog Panel -->
+  <div id="assistant-panel" class="fixed bottom-36 md:bottom-28 right-4 sm:right-6 z-50 w-[92vw] sm:w-96 bg-surface border-custom rounded-2xl shadow-2xl overflow-hidden hidden flex-col" role="dialog" aria-label="Demo Assistant">
+    <div class="bg-[#141414] p-3.5 border-b border-custom flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+        <div>
+          <p class="text-xs font-semibold text-white">Style Lounge AI Concierge</p>
+          <p class="text-[10px] text-stone-400">Demo assistant - goes live with the full build</p>
+        </div>
+      </div>
+      <button onclick="toggleAssistant()" class="text-stone-400 hover:text-white p-1">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="chat-messages" class="p-4 space-y-3 max-h-80 overflow-y-auto text-xs">
+      <div class="bg-[#141414] border-custom p-3 rounded-xl rounded-tl-none text-stone-200">
+        Welcome to Style Lounge Concierge. Are you looking to reserve a bespoke hair session, luxury dermal treatment, or bridal consultation in Thoppumpady today?
+      </div>
+      
+      <!-- Quick Chips -->
+      <div id="chat-chips" class="flex flex-wrap gap-1.5 pt-1">
+        <button onclick="sendQuickReply('Hair Design & Balayage')" class="bg-surface hover:bg-[#252525] border-custom text-stone-300 px-2.5 py-1 rounded text-[11px] transition">
+          Hair Design &amp; Balayage
+        </button>
+        <button onclick="sendQuickReply('Restorative Facial')" class="bg-surface hover:bg-[#252525] border-custom text-stone-300 px-2.5 py-1 rounded text-[11px] transition">
+          Restorative Facial
+        </button>
+        <button onclick="sendQuickReply('Bridal Consultation')" class="bg-surface hover:bg-[#252525] border-custom text-stone-300 px-2.5 py-1 rounded text-[11px] transition">
+          Bridal Consultation
+        </button>
+      </div>
+    </div>
+
+    <!-- Chat Input Form -->
+    <form id="chat-input-form" onsubmit="handleChatSubmit(event)" class="p-2.5 bg-[#141414] border-t border-custom flex items-center gap-2">
+      <input type="text" id="chat-text-input" placeholder="Type preferred date or service..." class="flex-1 bg-surface border-custom text-white text-xs px-3 py-2 rounded focus:outline-none focus:border-accent">
+      <button type="submit" class="bg-accent text-[#141414] p-2 rounded hover:bg-[#b45309] transition">
+        <i data-lucide="send" class="w-3.5 h-3.5"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Inline Script Logic -->
+  <script>
+    // Initialize Lucide icons
+    document.addEventListener("DOMContentLoaded", function () {
+      lucide.createIcons();
+      setupModalTriggers();
+    });
+
+    const businessName = "Style Lounge Family Salon | Salon in thoppumpady | Premium salon | Luxuary salon in kochi";
+    const agencyWhatsApp = "919645565454";
+    const agencyEmail = "hello@basiljose.tech";
+    const quoteWebhookUrl = "https://n8n.basiljose.tech/webhook/quote-request";
+
+    // Modals & Panels Control
+    function setupModalTriggers() {
+      document.querySelectorAll('.preview-trigger').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const pageName = this.getAttribute('data-preview-page') || 'Inner Page';
+          openModal(pageName);
+        });
+      });
+    }
+
+    function openModal(pageName) {
+      const modal = document.getElementById('upgrade-modal');
+      const headline = document.getElementById('modal-headline');
+      headline.innerText = `This inner page (${pageName}) is part of the full website package for ${businessName}. Request a quote below to unlock the complete multi-page build.`;
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('upgrade-modal').classList.add('hidden');
+    }
+
+    function toggleAssistant() {
+      const panel = document.getElementById('assistant-panel');
+      panel.classList.toggle('hidden');
+      panel.classList.toggle('flex');
+    }
+
+    function closeAssistant() {
+      const panel = document.getElementById('assistant-panel');
+      panel.classList.add('hidden');
+      panel.classList.remove('flex');
+    }
+
+    function scrollToQuote() {
+      closeModal();
+      closeAssistant();
+      const el = document.getElementById('quote-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function modalScrollToQuote() {
+      closeModal();
+      scrollToQuote();
+    }
+
+    // Modal background click and Escape handling
+    window.addEventListener('click', function(e) {
+      const modal = document.getElementById('upgrade-modal');
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+        closeAssistant();
+      }
+    });
+
+    // Assistant Scripted Dialogue
+    function appendUserMessage(text) {
+      const msgBox = document.getElementById('chat-messages');
+      const userDiv = document.createElement('div');
+      userDiv.className = "bg-accent/10 border border-accent/20 text-white p-3 rounded-xl rounded-tr-none text-right ml-auto max-w-[85%]";
+      userDiv.innerText = text;
+      msgBox.appendChild(userDiv);
+
+      const chips = document.getElementById('chat-chips');
+      if (chips) chips.style.display = 'none';
+
+      // Follow-up system response
+      setTimeout(() => {
+        const replyDiv = document.createElement('div');
+        replyDiv.className = "bg-[#141414] border-custom p-3 rounded-xl rounded-tl-none text-stone-200 space-y-2";
+        replyDiv.innerHTML = `
+          <p>I can take this booking once the full site is live. Request the full build to switch me on.</p>
+          <button onclick="scrollToQuote()" class="bg-accent text-[#141414] px-3 py-1.5 rounded text-[11px] font-bold block w-full text-center hover:bg-[#b45309] transition">
+            Request Full Build
+          </button>
+        `;
+        msgBox.appendChild(replyDiv);
+        msgBox.scrollTop = msgBox.scrollHeight;
+      }, 400);
+
+      msgBox.scrollTop = msgBox.scrollHeight;
+    }
+
+    function sendQuickReply(replyText) {
+      appendUserMessage(replyText);
+    }
+
+    function handleChatSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('chat-text-input');
+      const val = input.value.trim();
+      if (!val) return;
+      appendUserMessage(val);
+      input.value = '';
+    }
+
+    // Quote Form Submission
+    document.getElementById('quote-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('quote-submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnSpinner = document.getElementById('btn-spinner');
+      const formContainer = document.getElementById('quote-form-container');
+      const feedbackContainer = document.getElementById('quote-feedback');
+
+      // Lock UI
+      btn.disabled = true;
+      btnSpinner.classList.remove('hidden');
+      btnText.innerText = "Transmitting Request...";
+
+      const checkedBoxes = Array.from(document.querySelectorAll('input[name="addons"]:checked')).map(cb => cb.value);
+      
+      const payload = {
+        Lead_ID: "LEAD-CTYD0UVY",
+        Business_Name: businessName,
+        Owner_Name: document.getElementById('owner-name').value,
+        Preferred_Contact: document.getElementById('preferred-contact').value,
+        Selected_Addons: checkedBoxes,
+        Demo_URL: window.location.href,
+        Submitted_At: new Date().toISOString()
+      };
+
+      const waMsg = encodeURIComponent(`Hi, I would like a quote for the ${businessName} website`);
+      const fallbackButtonsHtml = `
+        <div class="flex flex-wrap justify-center gap-3 pt-3">
+          <a href="https://wa.me/${agencyWhatsApp}?text=${waMsg}" target="_blank" class="inline-flex items-center gap-1.5 bg-accent text-[#141414] font-bold text-xs px-4 py-2.5 rounded hover:bg-[#b45309] transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            WhatsApp Us Directly
+          </a>
+          <a href="mailto:${agencyEmail}" class="inline-flex items-center gap-1.5 bg-[#141414] border-custom text-white text-xs px-4 py-2.5 rounded hover:border-accent transition">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            Email Us
+          </a>
+        </div>
+      `;
+
+      try {
+        const res = await fetch(quoteWebhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          formContainer.classList.add('hidden');
+          feedbackContainer.classList.remove('hidden');
+          feedbackContainer.innerHTML = `
+            <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
+              <i data-lucide="check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-white">Thank You! Your Request Has Been Dispatched.</h3>
+            <p class="text-stone-300 text-xs sm:text-sm">We have received your specifications and will respond via your preferred contact channel promptly with the custom quote and timeline.</p>
+            ${fallbackButtonsHtml}
+          `;
+          lucide.createIcons();
+        } else {
+          throw new Error('Network error');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btnSpinner.classList.add('hidden');
+        btnText.innerText = "Send Me a Custom Quote";
+
+        feedbackContainer.classList.remove('hidden');
+        feedbackContainer.innerHTML = `
+          <div class="p-4 bg-red-950/40 border border-red-500/20 rounded-xl">
+            <p class="text-red-300 text-xs sm:text-sm font-medium">That did not go through. Message us directly instead.</p>
+            ${fallbackButtonsHtml}
+          </div>
+        `;
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
