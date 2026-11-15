@@ -1,1 +1,298 @@
-<h1>Client Previews</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Client Previews — Basil Jose</title>
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --surface: #131722;
+      --surface-hover: #1a2030;
+      --border: #232a3b;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --green: #34d399;
+      --amber: #fbbf24;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      flex: 1;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 0.25rem;
+    }
+
+    .search-box {
+      position: relative;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.65rem 0.95rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-box input:focus {
+      border-color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.4rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      background: var(--surface-hover);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.85rem;
+    }
+
+    .status {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    .status.ready {
+      color: var(--green);
+      background: rgba(52, 211, 153, 0.12);
+    }
+
+    .status.wip {
+      color: var(--amber);
+      background: rgba(251, 191, 36, 0.12);
+    }
+
+    .arrow {
+      color: var(--muted);
+      font-size: 1.1rem;
+      transition: transform 0.18s ease, color 0.18s ease;
+    }
+
+    .card:hover .arrow {
+      transform: translate(3px, -3px);
+      color: var(--accent);
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-footer {
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.75rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="badge"><span class="dot"></span> Staging Environment</div>
+        <h1>Client Previews</h1>
+        <p class="subtitle">Active builds and design drafts hosted by Basil Jose.</p>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Filter previews..." aria-label="Filter previews" />
+      </div>
+    </header>
+
+    <main class="grid" id="projectGrid"></main>
+  </div>
+
+  <footer>
+    Built by <a href="https://basiljose.tech" target="_blank" rel="noopener">basiljose.tech</a>
+  </footer>
+
+  <script>
+    // 1. Add your custom client previews here:
+    const projects = [
+      {
+        title: "Sample Client Landing Page",
+        slug: "sample-client",
+        description: "Initial homepage wireframe and responsive hero layout.",
+        status: "Ready for Review",
+        type: "ready",
+        updated: "Nov 2026"
+      }
+      // Copy and paste the block above for each new client folder
+    ];
+
+    const grid = document.getElementById("projectGrid");
+    const searchInput = document.getElementById("searchInput");
+
+    function renderProjects(filter = "") {
+      const term = filter.toLowerCase().trim();
+      const filtered = projects.filter(
+        (p) =>
+          p.title.toLowerCase().includes(term) ||
+          p.description.toLowerCase().includes(term) ||
+          p.slug.toLowerCase().includes(term)
+      );
+
+      if (!filtered.length) {
+        grid.innerHTML = `<div class="empty">No matching client previews found.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered
+        .map(
+          (p) => `
+          <a class="card" href="./${p.slug}/">
+            <div>
+              <div class="card-top">
+                <span class="status ${p.type}">${p.status}</span>
+                <span class="arrow">↗</span>
+              </div>
+              <h2>${p.title}</h2>
+              <p>${p.description}</p>
+            </div>
+            <div class="card-footer">
+              <span>/${p.slug}/</span>
+              <span>${p.updated}</span>
+            </div>
+          </a>
+        `
+        )
+        .join("");
+    }
+
+    searchInput.addEventListener("input", (e) => renderProjects(e.target.value));
+    renderProjects();
+  </script>
+</body>
+</html>
