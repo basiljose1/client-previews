@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lechus Beauty Parlor | Premium Salon in Kochi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FDF2F8',
+              100: '#FCE7F3',
+              200: '#FBCFE8',
+              600: '#DB2777',
+              700: '#BE185D',
+              800: '#9D174D',
+              900: '#831843',
+            },
+            charcoal: {
+              800: '#27272A',
+              900: '#18181B',
+              950: '#09090B'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-rose-50/30 text-charcoal-900 antialiased pb-28">
+
+  <!-- 1. Trust Bar -->
+  <aside class="bg-charcoal-950 text-rose-100/90 text-xs py-2 px-4 border-b border-rose-900/40">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 truncate">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-600 shrink-0"></i>
+        <span class="truncate">Love Dale, Ernattu Temple Rd, Palluruthy, Kochi, Keralam 682006</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-[11px] md:text-xs">
+        <div class="flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-brand-600 shrink-0"></i>
+          <span>Mon-Sat: 9:30 AM–6:30 PM | Sun: 10 AM–4 PM</span>
+        </div>
+        <a href="tel:+919645565454" class="flex items-center gap-1.5 text-white font-medium hover:text-brand-200 transition-colors focus:outline-none focus:ring-1 focus:ring-brand-600 rounded">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-600 shrink-0"></i>
+          <span>+91 96455 65454</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Sticky Glass Header -->
+  <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-rose-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <a href="#" class="flex items-center gap-2.5 focus:outline-none focus:ring-2 focus:ring-brand-700 rounded-lg p-1">
+        <div class="w-10 h-10 rounded-full bg-brand-700 text-white flex items-center justify-center shadow-md">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-extrabold text-lg sm:text-xl text-charcoal-900 tracking-tight leading-tight">Lechus Beauty Parlor</span>
+          <span class="text-[11px] tracking-wider uppercase text-brand-700 font-semibold">Palluruthy, Kochi</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-1 font-medium text-sm text-charcoal-800">
+        <button type="button" data-preview-page="About Us" class="preview-trigger px-3 py-2 rounded-md hover:text-brand-700 hover:bg-brand-50 transition">About Us</button>
+        <button type="button" data-preview-page="Services" class="preview-trigger px-3 py-2 rounded-md hover:text-brand-700 hover:bg-brand-50 transition">Services</button>
+        <button type="button" data-preview-page="Gallery" class="preview-trigger px-3 py-2 rounded-md hover:text-brand-700 hover:bg-brand-50 transition">Gallery</button>
+        <button type="button" data-preview-page="Pricing" class="preview-trigger px-3 py-2 rounded-md hover:text-brand-700 hover:bg-brand-50 transition">Pricing</button>
+        <button type="button" data-preview-page="Testimonials" class="preview-trigger px-3 py-2 rounded-md hover:text-brand-700 hover:bg-brand-50 transition">Testimonials</button>
+        <button type="button" data-preview-page="Contact" class="preview-trigger px-3 py-2 rounded-md hover:text-brand-700 hover:bg-brand-50 transition">Contact</button>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="tel:+919645565454" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-700 text-white text-sm font-semibold hover:bg-brand-800 transition shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-700">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span>Book via Call</span>
+        </a>
+        <button type="button" data-preview-page="Menu Navigation" class="preview-trigger lg:hidden p-2 rounded-lg text-charcoal-800 hover:bg-brand-50" aria-label="Open preview menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 3. Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-brand-50/60 via-white to-rose-50/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <!-- Google Rating Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-200/80 shadow-sm text-xs sm:text-sm font-semibold text-charcoal-900">
+              <span class="flex items-center gap-1 text-amber-500 font-bold">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400 stroke-amber-500"></i>
+                4.9
+              </span>
+              <span class="text-charcoal-400">|</span>
+              <span class="text-charcoal-800">4.9 rating across 480+ Google reviews</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-charcoal-950 tracking-tight leading-[1.15]">
+              Radiant Beauty &amp; Professional Care at <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 to-brand-600">Lechus Beauty Parlor</span> in Kochi
+            </h1>
+
+            <p class="text-base sm:text-lg text-charcoal-800/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Experience signature bridal makeovers, rejuvenating skin treatments, and customized hair care at Palluruthy’s most trusted beauty salon.
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a href="tel:+919645565454" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-brand-700 text-white font-semibold text-base shadow-lg shadow-brand-700/25 hover:bg-brand-800 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-700">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                Call Now
+              </a>
+              <button type="button" data-preview-page="Full Multi-Page Package" class="preview-trigger w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-white border border-rose-200 text-charcoal-900 font-semibold text-base hover:bg-brand-50 hover:border-brand-300 transition shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-700">
+                <i data-lucide="layout-grid" class="w-5 h-5 text-brand-700"></i>
+                Explore Full Site Features
+              </button>
+            </div>
+
+            <!-- Highlights -->
+            <div class="pt-6 border-t border-rose-200/60 grid grid-cols-3 gap-4 text-center lg:text-left">
+              <div>
+                <p class="text-2xl font-extrabold text-charcoal-950">480+</p>
+                <p class="text-xs text-charcoal-800/70">Verified Reviews</p>
+              </div>
+              <div>
+                <p class="text-2xl font-extrabold text-brand-700">4.9★</p>
+                <p class="text-xs text-charcoal-800/70">Customer Score</p>
+              </div>
+              <div>
+                <p class="text-2xl font-extrabold text-charcoal-950">7 Days</p>
+                <p class="text-xs text-charcoal-800/70">Open Every Week</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Abstract Decorative Card -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-sm rounded-3xl p-6 bg-gradient-to-tr from-brand-700 via-brand-600 to-rose-400 text-white shadow-2xl overflow-hidden">
+              <div class="absolute -right-12 -top-12 w-44 h-44 bg-white/10 rounded-full blur-xl"></div>
+              <div class="relative space-y-6">
+                <div class="flex items-center justify-between border-b border-white/20 pb-4">
+                  <div class="flex items-center gap-3">
+                    <div class="p-2.5 bg-white/20 rounded-xl backdrop-blur-sm">
+                      <i data-lucide="gem" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div>
+                      <h2 class="font-bold text-base leading-tight">Palluruthy Studio</h2>
+                      <p class="text-xs text-rose-100">Kochi, Kerala</p>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full bg-white/20 text-[11px] font-semibold backdrop-blur-sm">Open Today</span>
+                </div>
+
+                <div class="space-y-3">
+                  <div class="bg-white/10 backdrop-blur-sm p-3.5 rounded-xl border border-white/10">
+                    <p class="text-xs uppercase tracking-wider font-semibold text-rose-200">Featured Service</p>
+                    <p class="font-bold text-lg">Bridal Makeover &amp; Styling</p>
+                    <p class="text-xs text-rose-100 mt-0.5">Signature bridal trials and complete event packages.</p>
+                  </div>
+                  <div class="bg-white/10 backdrop-blur-sm p-3.5 rounded-xl border border-white/10">
+                    <p class="text-xs uppercase tracking-wider font-semibold text-rose-200">Customer Assurance</p>
+                    <p class="font-semibold text-sm">Strict Hygiene &amp; Premium Products</p>
+                  </div>
+                </div>
+
+                <div class="pt-2">
+                  <a href="tel:+919645565454" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-white text-brand-800 font-bold text-sm shadow hover:bg-rose-50 transition">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    Schedule Appointment
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Services Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold tracking-wider uppercase text-brand-700 bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Our Services</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal-950 mt-3 tracking-tight">Tailored Beauty &amp; Wellness</h2>
+          <p class="text-charcoal-800/80 text-sm sm:text-base mt-2">Expert salon treatments designed to bring out your natural elegance with premium care.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="rounded-2xl p-7 bg-brand-50/40 border border-rose-100 hover:shadow-lg transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-700 text-white flex items-center justify-center mb-5">
+                <i data-lucide="crown" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal-900 mb-2">Bridal Makeover Packages</h3>
+              <p class="text-sm text-charcoal-800/80 leading-relaxed mb-6">
+                Achieve your dream wedding look with customized makeup, saree draping, and hairstyle artistry. Our experienced team crafts camera-ready perfection tailored to your personal style.
+              </p>
+            </div>
+            <button type="button" data-preview-page="Bridal Makeover Packages" class="preview-trigger text-sm font-semibold text-brand-700 hover:text-brand-800 inline-flex items-center gap-1.5 focus:outline-none focus:underline self-start">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="rounded-2xl p-7 bg-brand-50/40 border border-rose-100 hover:shadow-lg transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-700 text-white flex items-center justify-center mb-5">
+                <i data-lucide="scissors" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal-900 mb-2">Advanced Hair Styling &amp; Spa</h3>
+              <p class="text-sm text-charcoal-800/80 leading-relaxed mb-6">
+                Revitalize dull hair with nourishing spa therapies, creative precision cuts, and smoothing treatments. We use premium salon formulations to boost natural shine and scalp strength.
+              </p>
+            </div>
+            <button type="button" data-preview-page="Advanced Hair Styling & Spa" class="preview-trigger text-sm font-semibold text-brand-700 hover:text-brand-800 inline-flex items-center gap-1.5 focus:outline-none focus:underline self-start">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="rounded-2xl p-7 bg-brand-50/40 border border-rose-100 hover:shadow-lg transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-700 text-white flex items-center justify-center mb-5">
+                <i data-lucide="sparkle" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal-900 mb-2">Rejuvenating Facials &amp; Skin Care</h3>
+              <p class="text-sm text-charcoal-800/80 leading-relaxed mb-6">
+                Refresh your complexion with deep-cleansing organic facials, de-tan therapy, and radiance treatments. Every session is personalized to suit your specific skin sensitivity.
+              </p>
+            </div>
+            <button type="button" data-preview-page="Rejuvenating Facials & Skin Care" class="preview-trigger text-sm font-semibold text-brand-700 hover:text-brand-800 inline-flex items-center gap-1.5 focus:outline-none focus:underline self-start">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="rounded-2xl p-7 bg-brand-50/40 border border-rose-100 hover:shadow-lg transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-700 text-white flex items-center justify-center mb-5">
+                <i data-lucide="hand" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal-900 mb-2">Deluxe Manicure &amp; Pedicure</h3>
+              <p class="text-sm text-charcoal-800/80 leading-relaxed mb-6">
+                Pamper your hands and feet with exfoliating scrubs, relaxing massages, and high-shine nail finishes. Enjoy hygienic grooming in a peaceful, restful atmosphere.
+              </p>
+            </div>
+            <button type="button" data-preview-page="Deluxe Manicure & Pedicure" class="preview-trigger text-sm font-semibold text-brand-700 hover:text-brand-800 inline-flex items-center gap-1.5 focus:outline-none focus:underline self-start">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="rounded-2xl p-7 bg-brand-50/40 border border-rose-100 hover:shadow-lg transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-700 text-white flex items-center justify-center mb-5">
+                <i data-lucide="feather" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal-900 mb-2">Precision Waxing &amp; Threading</h3>
+              <p class="text-sm text-charcoal-800/80 leading-relaxed mb-6">
+                Achieve silky-smooth skin with quick, hygienic hair removal techniques designed for maximum comfort. We ensure spotless brow shaping and gentle body wax options.
+              </p>
+            </div>
+            <button type="button" data-preview-page="Precision Waxing & Threading" class="preview-trigger text-sm font-semibold text-brand-700 hover:text-brand-800 inline-flex items-center gap-1.5 focus:outline-none focus:underline self-start">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="rounded-2xl p-7 bg-brand-50/40 border border-rose-100 hover:shadow-lg transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-brand-700 text-white flex items-center justify-center mb-5">
+                <i data-lucide="heart" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal-900 mb-2">Pre-Bridal Care Rituals</h3>
+              <p class="text-sm text-charcoal-800/80 leading-relaxed mb-6">
+                Multi-week skin, body, and hair revival regimens curated for brides-to-be and wedding guests. Look and feel radiant well before your big celebration begins.
+              </p>
+            </div>
+            <button type="button" data-preview-page="Pre-Bridal Care Rituals" class="preview-trigger text-sm font-semibold text-brand-700 hover:text-brand-800 inline-flex items-center gap-1.5 focus:outline-none focus:underline self-start">
+              Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Trust & Location Section -->
+    <section class="py-16 md:py-24 bg-rose-50/50 border-y border-rose-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Trust Banner -->
+        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-rose-100 mb-16">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 text-center lg:text-left">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-700">Client Endorsement</span>
+              <h2 class="text-3xl font-extrabold text-charcoal-950 mt-1">4.9 Star Excellence</h2>
+              <div class="flex items-center justify-center lg:justify-start gap-1 text-amber-500 my-3">
+                <i data-lucide="star" class="w-6 h-6 fill-amber-400"></i>
+                <i data-lucide="star" class="w-6 h-6 fill-amber-400"></i>
+                <i data-lucide="star" class="w-6 h-6 fill-amber-400"></i>
+                <i data-lucide="star" class="w-6 h-6 fill-amber-400"></i>
+                <i data-lucide="star" class="w-6 h-6 fill-amber-400"></i>
+              </div>
+              <p class="text-sm text-charcoal-800/80">
+                Proudly rated <span class="font-bold text-charcoal-950">4.9 out of 5</span> by more than <span class="font-bold text-charcoal-950">480 clients</span> on Google across Kochi.
+              </p>
+            </div>
+
+            <div class="lg:col-span-7">
+              <div class="bg-rose-50/60 p-4 rounded-xl mb-4 border border-rose-100">
+                <p class="text-xs font-semibold text-brand-800 text-center uppercase tracking-wide">
+                  Sample reviews - replaced with your real Google reviews at launch
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-xl border border-rose-100 text-xs text-charcoal-800/90 shadow-sm flex flex-col justify-between">
+                  <p class="italic leading-relaxed">"Exceptional bridal makeup service. Everything was done right on time with tremendous detail and care."</p>
+                  <p class="mt-3 font-bold text-charcoal-950 text-right">— Ananya M.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-rose-100 text-xs text-charcoal-800/90 shadow-sm flex flex-col justify-between">
+                  <p class="italic leading-relaxed">"The hair spa and facial gave immediate visible results. Very hygienic environment and warm staff."</p>
+                  <p class="mt-3 font-bold text-charcoal-950 text-right">— Divya K.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-rose-100 text-xs text-charcoal-800/90 shadow-sm flex flex-col justify-between">
+                  <p class="italic leading-relaxed">"My regular parlor in Palluruthy. Best prices and genuine care for skin treatments."</p>
+                  <p class="mt-3 font-bold text-charcoal-950 text-right">— Reshma S.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location & Hours Card -->
+        <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-rose-100">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div class="space-y-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-700">Find Us in Palluruthy</span>
+              <h3 class="text-2xl font-bold text-charcoal-950">Visit Lechus Beauty Parlor</h3>
+              <div class="flex items-start gap-3 text-sm text-charcoal-800/80">
+                <i data-lucide="map-pin" class="w-5 h-5 text-brand-700 shrink-0 mt-0.5"></i>
+                <p>Love Dale, Ernattu Temple Rd, Palluruthy, Kochi, Keralam 682006</p>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-charcoal-800/80">
+                <i data-lucide="phone" class="w-5 h-5 text-brand-700 shrink-0"></i>
+                <a href="tel:+919645565454" class="hover:text-brand-700 font-medium">+91 96455 65454</a>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-charcoal-800/80">
+                <i data-lucide="mail" class="w-5 h-5 text-brand-700 shrink-0"></i>
+                <span>basiljose1@gmail.com</span>
+              </div>
+              <div class="pt-2">
+                <a href="https://www.google.com/maps/search/?api=1&query=Lechus+Beauty+Parlor%2CLove+Dale%2C+Eranat+Temple+Road%2CPalluruthy%2C+Kochi-682006+Love+Dale%2C+Ernattu+Temple+Rd%2C+Palluruthy%2C+Kochi%2C+Keralam+682006" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-charcoal-950 text-white font-semibold text-sm hover:bg-brand-700 transition">
+                  <i data-lucide="navigation" class="w-4 h-4"></i>
+                  Get Directions
+                </a>
+              </div>
+            </div>
+
+            <!-- Hours Box -->
+            <div class="bg-brand-50/50 rounded-2xl p-6 border border-rose-100/80">
+              <h4 class="font-bold text-charcoal-950 text-base mb-3 flex items-center gap-2">
+                <i data-lucide="calendar-clock" class="w-5 h-5 text-brand-700"></i>
+                Opening Hours
+              </h4>
+              <ul class="text-xs sm:text-sm text-charcoal-800 space-y-1.5 divide-y divide-rose-100">
+                <li class="pt-1.5 flex justify-between"><span>Monday</span><span class="font-medium">9:30 am – 6:30 pm</span></li>
+                <li class="pt-1.5 flex justify-between"><span>Tuesday</span><span class="font-medium">9:30 am – 6:30 pm</span></li>
+                <li class="pt-1.5 flex justify-between"><span>Wednesday</span><span class="font-medium">9:30 am – 6:30 pm</span></li>
+                <li class="pt-1.5 flex justify-between"><span>Thursday</span><span class="font-medium">9:30 am – 6:30 pm</span></li>
+                <li class="pt-1.5 flex justify-between"><span>Friday</span><span class="font-medium">9:30 am – 6:30 pm</span></li>
+                <li class="pt-1.5 flex justify-between"><span>Saturday</span><span class="font-medium">9:00 am – 6:30 pm</span></li>
+                <li class="pt-1.5 flex justify-between text-brand-800 font-semibold"><span>Sunday</span><span>10:00 am – 4:00 pm</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. Quote Form Section -->
+    <section id="quote-section" class="py-16 md:py-24 bg-white scroll-mt-24">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <span class="text-xs font-bold tracking-wider uppercase text-brand-700 bg-brand-50 px-3 py-1 rounded-full border border-brand-100">Custom Web Solution</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal-950 mt-3 tracking-tight">Request Full Website Package</h2>
+          <p class="text-charcoal-800/80 text-sm sm:text-base mt-2">Get your complete online appointment suite, dedicated domain, and automated booking system.</p>
+        </div>
+
+        <div class="bg-rose-50/40 rounded-3xl p-6 sm:p-10 border border-rose-200 shadow-sm relative">
+          <form id="quote-form" class="space-y-6">
+            <!-- Hidden inputs -->
+            <input type="hidden" name="Lead_ID" value="LEAD-P2ODKTBG">
+            <input type="hidden" name="Business_Name" value="Lechus Beauty Parlor,Love Dale, Eranat Temple Road,Palluruthy, Kochi-682006">
+
+            <div>
+              <label for="owner-name" class="block text-sm font-semibold text-charcoal-900 mb-1.5">Owner / Contact Name <span class="text-brand-700">*</span></label>
+              <input type="text" id="owner-name" name="Owner_Name" required placeholder="e.g. Salon Owner Name" class="w-full px-4 py-3 rounded-xl border border-rose-200 bg-white text-charcoal-950 text-sm focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700 transition">
+            </div>
+
+            <div>
+              <label for="preferred-contact" class="block text-sm font-semibold text-charcoal-900 mb-1.5">Preferred Contact <span class="text-brand-700">*</span></label>
+              <input type="text" id="preferred-contact" name="Preferred_Contact" required placeholder="Phone / WhatsApp or email" class="w-full px-4 py-3 rounded-xl border border-rose-200 bg-white text-charcoal-950 text-sm focus:outline-none focus:ring-2 focus:ring-brand-700 focus:border-brand-700 transition">
+            </div>
+
+            <div>
+              <span class="block text-sm font-semibold text-charcoal-900 mb-2.5">Select Website Features Needed:</span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                <label class="flex items-center gap-3 p-3 rounded-xl bg-white border border-rose-200 cursor-pointer hover:border-brand-600 transition">
+                  <input type="checkbox" name="addons" value="Full 5-Page Custom Website" checked class="w-4 h-4 text-brand-700 rounded border-gray-300 focus:ring-brand-700">
+                  <span class="text-charcoal-800 font-medium">Full 5-Page Custom Website</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl bg-white border border-rose-200 cursor-pointer hover:border-brand-600 transition">
+                  <input type="checkbox" name="addons" value="WhatsApp Instant Booking Integration" checked class="w-4 h-4 text-brand-700 rounded border-gray-300 focus:ring-brand-700">
+                  <span class="text-charcoal-800 font-medium">WhatsApp Instant Booking Integration</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl bg-white border border-rose-200 cursor-pointer hover:border-brand-600 transition">
+                  <input type="checkbox" name="addons" value="Custom Domain & Business Email" class="w-4 h-4 text-brand-700 rounded border-gray-300 focus:ring-brand-700">
+                  <span class="text-charcoal-800 font-medium">Custom Domain &amp; Business Email</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl bg-white border border-rose-200 cursor-pointer hover:border-brand-600 transition">
+                  <input type="checkbox" name="addons" value="Local Google Maps SEO Boost" class="w-4 h-4 text-brand-700 rounded border-gray-300 focus:ring-brand-700">
+                  <span class="text-charcoal-800 font-medium">Local Google Maps SEO Boost</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-brand-700 text-white font-bold text-base shadow-lg shadow-brand-700/20 hover:bg-brand-800 transition flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-700">
+              <span>Send Me a Custom Quote</span>
+            </button>
+          </form>
+
+          <!-- Form Feedback Container -->
+          <div id="form-response" class="hidden text-center py-6 space-y-4"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. Fixed Bottom Banner -->
+  <footer class="fixed bottom-0 inset-x-0 z-40 bg-zinc-950/95 text-white backdrop-blur-md border-t border-zinc-800 py-3 px-4 shadow-2xl">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+      <div class="text-xs sm:text-sm text-zinc-300">
+        Concept built exclusively for <span class="font-semibold text-rose-300">Lechus Beauty Parlor</span> by <span class="font-semibold text-white">Basil Jose</span>. Like this look? Unlock all inner pages, your own domain and WhatsApp booking.
+      </div>
+      <button type="button" id="banner-request-btn" class="shrink-0 px-5 py-2.5 rounded-xl bg-brand-700 text-white font-bold text-xs sm:text-sm hover:bg-brand-600 transition shadow-md focus:outline-none focus:ring-2 focus:ring-white">
+        Request Full Build
+      </button>
+    </div>
+  </footer>
+
+  <!-- 8. Upgrade Modal -->
+  <div id="upgrade-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-zinc-950/70 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modal-backdrop" class="absolute inset-0"></div>
+    <div class="relative bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-rose-100 z-10 animate-in fade-in zoom-in-95 duration-150">
+      <button type="button" id="modal-close" class="absolute top-4 right-4 p-2 text-charcoal-400 hover:text-charcoal-900 rounded-full hover:bg-rose-50 transition" aria-label="Close modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-700 flex items-center justify-center mb-5 border border-brand-100">
+        <i data-lucide="layers" class="w-6 h-6"></i>
+      </div>
+
+      <h3 id="modal-title" class="text-xl sm:text-2xl font-bold text-charcoal-950 leading-snug">
+        This inner page (<span id="modal-target-page" class="text-brand-700">Preview</span>) is part of the full website package for Lechus Beauty Parlor,Love Dale, Eranat Temple Road,Palluruthy, Kochi-682006. Request a quote below to unlock the complete multi-page build.
+      </h3>
+
+      <p class="text-sm text-charcoal-800/80 mt-3 leading-relaxed">
+        The complete delivery includes fully designed pages for all services, custom galleries, appointment automation, and direct mobile optimization for customers across Kochi.
+      </p>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <button type="button" id="modal-quote-btn" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-700 text-white font-semibold text-sm hover:bg-brand-800 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-700">
+          Request Quote Below
+        </button>
+        <button type="button" id="modal-cancel-btn" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl border border-rose-200 text-charcoal-800 text-sm font-medium hover:bg-rose-50 transition">
+          Close Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Initialize icons
+    lucide.createIcons();
+
+    // Modal Handling
+    const modal = document.getElementById('upgrade-modal');
+    const modalTargetText = document.getElementById('modal-target-page');
+    const modalClose = document.getElementById('modal-close');
+    const modalCancel = document.getElementById('modal-cancel-btn');
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const modalQuoteBtn = document.getElementById('modal-quote-btn');
+    const bannerRequestBtn = document.getElementById('banner-request-btn');
+
+    function openModal(pageName) {
+      modalTargetText.textContent = pageName || 'Feature';
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.preview-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const page = btn.getAttribute('data-preview-page');
+        openModal(page);
+      });
+    });
+
+    [modalClose, modalCancel, modalBackdrop].forEach(el => {
+      if (el) el.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+
+    function scrollToQuote() {
+      closeModal();
+      const quoteSection = document.getElementById('quote-section');
+      if (quoteSection) {
+        quoteSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    modalQuoteBtn.addEventListener('click', scrollToQuote);
+    bannerRequestBtn.addEventListener('click', scrollToQuote);
+
+    // Form Handling
+    const form = document.getElementById('quote-form');
+    const formResponse = document.getElementById('form-response');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const originalBtnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span>Sending Request...</span>
+      `;
+
+      const checkedAddons = Array.from(form.querySelectorAll('input[name="addons"]:checked')).map(cb => cb.value);
+
+      const payload = {
+        Lead_ID: "LEAD-P2ODKTBG",
+        Business_Name: "Lechus Beauty Parlor,Love Dale, Eranat Temple Road,Palluruthy, Kochi-682006",
+        Owner_Name: document.getElementById('owner-name').value,
+        Preferred_Contact: document.getElementById('preferred-contact').value,
+        Selected_Addons: checkedAddons,
+        Demo_URL: window.location.href,
+        Submitted_At: new Date().toISOString()
+      };
+
+      try {
+        const response = await fetch("https://n8n.basiljose.tech/webhook/quote-request", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          form.classList.add('hidden');
+          formResponse.classList.remove('hidden');
+          formResponse.innerHTML = `
+            <div class="p-6 bg-white rounded-2xl border border-emerald-200 shadow-sm text-center">
+              <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                <i data-lucide="check" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-charcoal-950 mb-1">Thank you! Your quote request has been sent.</h3>
+              <p class="text-sm text-charcoal-700 mb-6">Basil Jose will review your request and get in touch with you shortly.</p>
+              <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href="https://wa.me/919645565454?text=${encodeURIComponent("Hi, I would like a quote for the Lechus Beauty Parlor,Love Dale, Eranat Temple Road,Palluruthy, Kochi-682006 website")}" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-sm hover:bg-emerald-700 transition">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Us Directly
+                </a>
+                <a href="mailto:hello@basiljose.tech" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-charcoal-900 text-white font-semibold text-sm hover:bg-charcoal-800 transition">
+                  <i data-lucide="mail" class="w-4 h-4"></i> Email Directly
+                </a>
+              </div>
+            </div>
+          `;
+          lucide.createIcons();
+        } else {
+          throw new Error('Network error');
+        }
+      } catch (error) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+        formResponse.classList.remove('hidden');
+        formResponse.innerHTML = `
+          <div class="p-4 bg-rose-100/90 rounded-xl border border-rose-300 text-charcoal-900 text-sm">
+            <p class="font-semibold mb-3">That did not go through. Message us directly instead.</p>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+              <a href="https://wa.me/919645565454?text=${encodeURIComponent("Hi, I would like a quote for the Lechus Beauty Parlor,Love Dale, Eranat Temple Road,Palluruthy, Kochi-682006 website")}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white font-medium text-xs hover:bg-emerald-700 transition">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
+              </a>
+              <a href="mailto:hello@basiljose.tech" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-charcoal-900 text-white font-medium text-xs hover:bg-charcoal-800 transition">
+                <i data-lucide="mail" class="w-3.5 h-3.5"></i> Email
+              </a>
+            </div>
+          </div>
+        `;
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
