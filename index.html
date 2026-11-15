@@ -4,295 +4,449 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Client Previews — Basil Jose</title>
+  <title>Basil Jose — Websites for local businesses</title>
+  <meta name="description" content="Live homepage concepts built for local businesses in Kochi, and a quick chat to request one for yours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0b0d12;
-      --surface: #131722;
-      --surface-hover: #1a2030;
-      --border: #232a3b;
-      --text: #f1f5f9;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.12);
-      --green: #34d399;
-      --amber: #fbbf24;
+      --bg: #f4f4f5;
+      --ink: #0a0a0b;
+      --muted: #63636b;
+      --faint: #6b6b74;
+      --glass: rgba(255, 255, 255, 0.62);
+      --glass-strong: rgba(255, 255, 255, 0.82);
+      --border: rgba(10, 10, 11, 0.08);
+      --highlight: rgba(255, 255, 255, 0.9);
+      --accent: #2563eb;
+      --accent-ink: #fff;
+      --accent-soft: rgba(37, 99, 235, 0.1);
+      --ok: #16a34a;
+      --err: #dc2626;
+      --blob-a: rgba(59, 130, 246, 0.22);
+      --blob-b: rgba(168, 85, 247, 0.16);
+      --blob-c: rgba(20, 184, 166, 0.16);
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 12px 32px -16px rgba(0, 0, 0, 0.18);
+      --r: 22px;
+      color-scheme: light;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #09090b;
+        --ink: #fafafa;
+        --muted: #a1a1aa;
+        --faint: #8e8e98;
+        --glass: rgba(24, 24, 27, 0.58);
+        --glass-strong: rgba(24, 24, 27, 0.82);
+        --border: rgba(255, 255, 255, 0.08);
+        --highlight: rgba(255, 255, 255, 0.06);
+        --accent: #60a5fa;
+        --accent-ink: #09090b;
+        --accent-soft: rgba(96, 165, 250, 0.14);
+        --ok: #4ade80;
+        --err: #f87171;
+        --blob-a: rgba(37, 99, 235, 0.28);
+        --blob-b: rgba(147, 51, 234, 0.2);
+        --blob-c: rgba(13, 148, 136, 0.18);
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 16px 40px -20px rgba(0, 0, 0, 0.7);
+        color-scheme: dark;
+      }
     }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+    body { font: 400 16px/1.55 Figtree, system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; }
+    /* Soft colour fields behind the glass, so the blur has something to refract. */
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(40vw 40vw at 12% 8%, var(--blob-a), transparent 70%),
+        radial-gradient(36vw 36vw at 92% 20%, var(--blob-b), transparent 70%),
+        radial-gradient(44vw 44vw at 60% 95%, var(--blob-c), transparent 70%);
     }
+    a { color: inherit; }
+    .wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 16px; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .mono { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.75rem; letter-spacing: 0.02em; color: var(--faint); }
 
-    .container {
-      width: 100%;
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-      flex: 1;
-    }
-
-    header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 1.5rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 2.5rem;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: var(--accent-soft);
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-      margin-bottom: 0.75rem;
-    }
-
-    .dot {
-      width: 7px;
-      height: 7px;
-      background: var(--accent);
-      border-radius: 50%;
-    }
-
-    h1 {
-      font-size: 1.85rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .subtitle {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-top: 0.25rem;
-    }
-
-    .search-box {
-      position: relative;
-      width: 100%;
-      max-width: 280px;
-    }
-
-    .search-box input {
-      width: 100%;
-      background: var(--surface);
+    .glass {
+      background: var(--glass);
+      -webkit-backdrop-filter: blur(22px) saturate(170%);
+      backdrop-filter: blur(22px) saturate(170%);
       border: 1px solid var(--border);
-      color: var(--text);
-      padding: 0.65rem 0.95rem;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      outline: none;
-      transition: border-color 0.2s;
+      border-radius: var(--r);
+      box-shadow: inset 0 1px 0 var(--highlight), var(--shadow);
     }
 
-    .search-box input:focus {
-      border-color: var(--accent);
+    nav { position: sticky; top: 12px; z-index: 10; margin: 12px auto 0; display: flex; justify-content: space-between; align-items: center; padding: 10px 10px 10px 18px; border-radius: 999px; }
+    .brand { font-weight: 700; text-decoration: none; letter-spacing: -0.01em; }
+    .brand span { color: var(--muted); font-weight: 500; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 0 18px;
+      border-radius: 999px; border: 1px solid transparent; background: var(--ink); color: var(--bg);
+      font: 600 0.92rem/1 Figtree, sans-serif; text-decoration: none; cursor: pointer; transition: transform 0.15s ease, opacity 0.15s ease;
     }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:disabled { opacity: 0.5; cursor: default; transform: none; }
+    .btn.ghost { background: transparent; color: var(--ink); border-color: var(--border); }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.25rem;
+    .bento {
+      display: grid; gap: 14px; padding: 28px 0 14px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "hero hero" "chat chat" "m1 m2" "m3 m4" "steps steps";
     }
+    @media (min-width: 960px) {
+      .bento {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "hero hero hero hero chat chat" "m1 m1 m2 m3 chat chat" "m4 steps steps steps chat chat";
+      }
+    }
+    .cell { padding: 24px; min-width: 0; }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.4rem;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-    }
+    .hero { grid-area: hero; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; padding: 32px; }
+    .hero h1 { font-size: clamp(2.3rem, 5.4vw, 4rem); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; max-width: 15ch; }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 52ch; margin-top: 16px; }
+    .hero .actions { display: flex; flex-wrap: wrap; gap: 10px; }
 
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: var(--accent);
-      background: var(--surface-hover);
-    }
+    .metric { display: flex; flex-direction: column; justify-content: space-between; gap: 18px; }
+    .metric b { font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+    .metric p { color: var(--muted); font-size: 0.9rem; }
+    .m1 { grid-area: m1; } .m2 { grid-area: m2; } .m3 { grid-area: m3; } .m4 { grid-area: m4; }
+    .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); margin-right: 6px; box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 20%, transparent); }
 
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.85rem;
-    }
+    .steps { grid-area: steps; display: grid; gap: 14px; }
+    .steps h2 { font-size: 1.15rem; font-weight: 600; }
+    .steps ol { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; counter-reset: s; }
+    .steps li { counter-increment: s; padding: 14px; border: 1px solid var(--border); border-radius: 14px; background: var(--glass-strong); font-size: 0.9rem; color: var(--muted); }
+    .steps li::before { content: "0" counter(s); display: block; font: 500 0.75rem "JetBrains Mono", monospace; color: var(--accent); margin-bottom: 6px; }
+    .steps li strong { display: block; color: var(--ink); font-weight: 600; margin-bottom: 2px; }
 
-    .status {
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.2rem 0.6rem;
-      border-radius: 6px;
-    }
+    /* Lead-qualifying assistant: a scripted conversation that ends in the same site-request webhook as a form would. */
+    .chat { grid-area: chat; display: flex; flex-direction: column; padding: 0; overflow: hidden; height: 600px; }
+    @media (min-width: 960px) { .chat { height: auto; min-height: 600px; } }
+    .chat header { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--border); }
+    .avatar { width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font-weight: 700; }
+    .chat header strong { display: block; font-size: 0.95rem; }
+    .chat header small { color: var(--muted); font-size: 0.8rem; }
+    .log { flex: 1; overflow-y: auto; padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+    .msg { max-width: 85%; padding: 10px 14px; border-radius: 16px; font-size: 0.93rem; line-height: 1.45; animation: rise 0.25s ease both; overflow-wrap: anywhere; }
+    .msg.bot { align-self: flex-start; background: var(--glass-strong); border: 1px solid var(--border); border-bottom-left-radius: 6px; }
+    .msg.me { align-self: flex-end; background: var(--accent); color: var(--accent-ink); border-bottom-right-radius: 6px; }
+    .msg.typing { color: var(--faint); letter-spacing: 0.2em; }
+    .summary { align-self: stretch; display: grid; gap: 6px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 14px; background: var(--glass-strong); font-size: 0.86rem; animation: rise 0.25s ease both; }
+    .summary div { display: flex; justify-content: space-between; gap: 12px; }
+    .summary dt { color: var(--muted); }
+    .summary dd { text-align: right; font-weight: 500; overflow-wrap: anywhere; }
+    @keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 18px 12px; }
+    .chip { min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--glass-strong); color: var(--ink); font: 500 0.88rem Figtree, sans-serif; cursor: pointer; }
+    a.chip { display: inline-flex; align-items: center; text-decoration: none; }
+    .chip:hover { border-color: var(--accent); color: var(--accent); }
+    .chip.primary { background: var(--ink); color: var(--bg); border-color: transparent; }
+    .composer { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--border); }
+    .composer input { flex: 1; min-width: 0; min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--border); background: var(--glass-strong); color: var(--ink); font: 400 1rem Figtree, sans-serif; }
+    .composer input:disabled { opacity: 0.5; }
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-    .status.ready {
-      color: var(--green);
-      background: rgba(52, 211, 153, 0.12);
-    }
+    section.work { padding: 64px 0 80px; }
+    .work > header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px; margin-bottom: 22px; }
+    .work h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; letter-spacing: -0.03em; }
+    .work > header p { color: var(--muted); max-width: 46ch; }
+    .demos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 14px; }
+    @media (min-width: 960px) { .demos .card:first-child { grid-column: span 2; } }
+    .card { display: flex; flex-direction: column; text-decoration: none; overflow: hidden; transition: transform 0.2s ease; }
+    .card:hover { transform: translateY(-3px); }
+    .shot { position: relative; aspect-ratio: 16 / 10; overflow: hidden; margin: 8px 8px 0; border-radius: 15px; border: 1px solid var(--border); background: var(--glass-strong); }
+    .shot iframe { position: absolute; top: 0; left: 0; width: 1280px; height: 800px; border: 0; transform-origin: 0 0; transform: scale(var(--s, 0.25)); pointer-events: none; }
+    .card .body { padding: 16px 18px 18px; display: grid; gap: 10px; }
+    .card h3 { font-size: 1.3rem; font-weight: 650; letter-spacing: -0.02em; }
+    .card dl { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 4px 18px; font-size: 0.82rem; }
+    .card dt { color: var(--faint); }
+    .card dd { font-weight: 500; }
+    .card .foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 12px; }
+    .card .open { font-size: 0.88rem; font-weight: 600; color: var(--accent); white-space: nowrap; }
+    .note { grid-column: 1 / -1; padding: 40px 20px; text-align: center; color: var(--muted); }
+    .skeleton .shot { animation: pulse 1.4s ease-in-out infinite; }
+    .skeleton h3 { background: var(--border); color: transparent; border-radius: 8px; }
+    @keyframes pulse { 50% { opacity: 0.5; } }
 
-    .status.wip {
-      color: var(--amber);
-      background: rgba(251, 191, 36, 0.12);
-    }
-
-    .arrow {
-      color: var(--muted);
-      font-size: 1.1rem;
-      transition: transform 0.18s ease, color 0.18s ease;
-    }
-
-    .card:hover .arrow {
-      transform: translate(3px, -3px);
-      color: var(--accent);
-    }
-
-    .card h2 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.88rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .card-footer {
-      font-size: 0.8rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      padding-top: 0.75rem;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .empty {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--muted);
-      border: 1px dashed var(--border);
-      border-radius: 14px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.75rem 1rem;
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-    }
-
-    footer a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: var(--accent);
-    }
+    footer { padding: 24px 0 40px; color: var(--muted); font-size: 0.88rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+    footer a { text-decoration: none; color: var(--ink); font-weight: 500; }
   </style>
+<script>window.dataLayer=window.dataLayer||[];window.dataLayer.push({"client_category":"showcase","client_name":"Basil Jose preview"});window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+(function(){
+var dl=window.dataLayer=window.dataLayer||[];
+window.gtag=window.gtag||function(){dl.push(arguments);};
+function track(name,p){var o={event:name};for(var k in p)o[k]=p[k];dl.push(o);}
+document.addEventListener('click',function(e){
+var el=e.target.closest&&e.target.closest('a,button');if(!el)return;
+var href=el.getAttribute('href')||'',label=(el.textContent||'').trim().replace(/\s+/g,' ').slice(0,80);
+var lead={event_category:'lead',event_label:href};
+if(/wa\.me|whatsapp\.com/i.test(href))track('whatsapp_click',lead);
+else if(/^tel:/i.test(href))track('phone_call_click',lead);
+else if(/^mailto:/i.test(href))track('email_click',lead);
+else if(/google\.[a-z.]+\/maps|maps\.google\.|maps\.app\.goo\.gl/i.test(href))track('directions_click',lead);
+else if(el.hasAttribute('data-agent-trigger'))track('ai_agent_open',{event_category:'engagement',event_label:label});
+else if(el.hasAttribute('data-preview-page'))track('preview_page_click',{event_category:'engagement',event_label:el.getAttribute('data-preview-page')});
+else if(el.host&&el.host!==location.host)track('outbound_click',{event_category:'navigation',event_label:href});
+else track('cta_click',{event_category:'engagement',event_label:label,link_url:href});
+},true);
+document.addEventListener('submit',function(e){var f=e.target;track('form_submit',{event_category:'lead',event_label:f.id||f.getAttribute('name')||'form'});},true);
+})();</script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WR7DQZ54"></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div>
-        <div class="badge"><span class="dot"></span> Staging Environment</div>
-        <h1>Client Previews</h1>
-        <p class="subtitle">Active builds and design drafts hosted by Basil Jose.</p>
-      </div>
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Filter previews..." aria-label="Filter previews" />
-      </div>
-    </header>
+  <div class="wrap">
+    <nav class="glass">
+      <a class="brand" href="./">Basil Jose <span>· Web &amp; Automation</span></a>
+      <a class="btn" href="#chat" data-agent-trigger>Get a concept</a>
+    </nav>
 
-    <main class="grid" id="projectGrid"></main>
+    <main class="bento">
+      <section class="glass cell hero" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title">Your reviews are great. Your website should <em>prove it.</em></h1>
+          <p>I build mobile-first websites for local businesses in Kochi, and you see a working homepage before you pay anything.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#chat" data-agent-trigger>Start the 1-minute chat</a>
+          <a class="btn ghost" href="#work">Browse live concepts</a>
+        </div>
+      </section>
+
+      <div class="glass cell metric m1">
+        <span class="mono"><span class="live-dot" aria-hidden="true"></span>LIVE NOW</span>
+        <div><b id="demo-count">–</b><p>homepage concepts online today</p></div>
+      </div>
+      <div class="glass cell metric m2">
+        <span class="mono">COST</span>
+        <div><b>₹0</b><p>to see your concept</p></div>
+      </div>
+      <div class="glass cell metric m3">
+        <span class="mono">DESIGN</span>
+        <div><b>6</b><p>styles matched to your trade</p></div>
+      </div>
+      <div class="glass cell metric m4">
+        <span class="mono">BUILT FOR</span>
+        <div><b>📱</b><p>phones first: call, WhatsApp, map</p></div>
+      </div>
+
+      <section class="glass cell steps" aria-labelledby="steps-title">
+        <h2 id="steps-title">How it works</h2>
+        <ol>
+          <li><strong>Tell me about you</strong>Your listing, reviews and services shape the page.</li>
+          <li><strong>Get a live link</strong>A real homepage you can open on your phone.</li>
+          <li><strong>Decide</strong>Go live on your domain with booking and Google SEO.</li>
+        </ol>
+      </section>
+
+      <section class="glass chat" id="chat" aria-labelledby="chat-title">
+        <header>
+          <div class="avatar" aria-hidden="true">B</div>
+          <div><strong id="chat-title">Concept assistant</strong><small>Answers in about a minute · goes straight to Basil</small></div>
+        </header>
+        <div class="log" id="log" role="log" aria-live="polite"></div>
+        <div class="chips" id="chips"></div>
+        <form class="composer" id="composer">
+          <label class="sr" for="reply">Your reply</label>
+          <input id="reply" autocomplete="off" maxlength="200" disabled />
+          <button class="btn" type="submit" disabled>Send</button>
+        </form>
+      </section>
+    </main>
+
+    <section class="work" id="work" aria-labelledby="work-title">
+      <header>
+        <h2 id="work-title">Live concepts</h2>
+        <p>Each card is a working page built for a real local business. Open one on your phone to see it the way their customers would.</p>
+      </header>
+      <div class="demos" id="demos" aria-live="polite">
+        <div class="glass card skeleton" aria-hidden="true"><div class="shot"></div><div class="body"><h3>Loading concept</h3></div></div>
+        <div class="glass card skeleton" aria-hidden="true"><div class="shot"></div><div class="body"><h3>Loading concept</h3></div></div>
+      </div>
+    </section>
   </div>
 
   <footer>
-    Built by <a href="https://basiljose.tech" target="_blank" rel="noopener">basiljose.tech</a>
+    <div class="wrap">
+      <span>© Basil Jose · Web &amp; Automation Architect · Kochi</span>
+      <span><a href="https://wa.me/919645565454" rel="noopener">WhatsApp</a> · <a href="mailto:hello@basiljose.tech">hello@basiljose.tech</a></span>
+    </div>
   </footer>
 
   <script>
-    // 1. Add your custom client previews here:
-    const projects = [
-      {
-        title: "Sample Client Landing Page",
-        slug: "sample-client",
-        description: "Initial homepage wireframe and responsive hero layout.",
-        status: "Ready for Review",
-        type: "ready",
-        updated: "Nov 2026"
-      }
-      // Copy and paste the block above for each new client folder
-    ];
+    // Demos are folders under demos/ in the client-previews repo; build-spec-site adds them, so this list is never edited by hand.
+    const REPO_DEMOS_API = "https://api.github.com/repos/basiljose1/client-previews/contents/demos";
+    const REQUEST_WEBHOOK = "https://n8n.basiljose.tech/webhook/site-request";
+    const PREVIEW_WIDTH = 1280;
+    const el = (tag, props = {}, ...kids) => { const n = Object.assign(document.createElement(tag), props); n.append(...kids); return n; };
 
-    const grid = document.getElementById("projectGrid");
-    const searchInput = document.getElementById("searchInput");
+    // ---------- live concepts ----------
+    const demos = document.getElementById("demos");
+    const resize = new ResizeObserver(entries => {
+      for (const e of entries) e.target.style.setProperty("--s", e.contentRect.width / PREVIEW_WIDTH);
+    });
 
-    function renderProjects(filter = "") {
-      const term = filter.toLowerCase().trim();
-      const filtered = projects.filter(
-        (p) =>
-          p.title.toLowerCase().includes(term) ||
-          p.description.toLowerCase().includes(term) ||
-          p.slug.toLowerCase().includes(term)
-      );
-
-      if (!filtered.length) {
-        grid.innerHTML = `<div class="empty">No matching client previews found.</div>`;
-        return;
-      }
-
-      grid.innerHTML = filtered
-        .map(
-          (p) => `
-          <a class="card" href="./${p.slug}/">
-            <div>
-              <div class="card-top">
-                <span class="status ${p.type}">${p.status}</span>
-                <span class="arrow">↗</span>
-              </div>
-              <h2>${p.title}</h2>
-              <p>${p.description}</p>
-            </div>
-            <div class="card-footer">
-              <span>/${p.slug}/</span>
-              <span>${p.updated}</span>
-            </div>
-          </a>
-        `
-        )
-        .join("");
+    function note(text) {
+      demos.replaceChildren(el("div", { className: "glass note", textContent: text }));
     }
 
-    searchInput.addEventListener("input", (e) => renderProjects(e.target.value));
-    renderProjects();
+    // Name and tagline come from the demo page's own <title> ("Name | Tagline"), falling back to the folder slug.
+    async function describe(slug) {
+      const fallback = { name: slug.replace(/-[a-z0-9]{8}$/, "").replace(/-/g, " "), tagline: "Homepage concept" };
+      try {
+        const res = await fetch(`demos/${slug}/`);
+        if (!res.ok) return fallback;
+        const title = new DOMParser().parseFromString(await res.text(), "text/html").title.trim();
+        const [name, tagline] = title.split(/\s+[|–—-]\s+/);
+        return name ? { name, tagline: tagline || fallback.tagline } : fallback;
+      } catch {
+        return fallback;
+      }
+    }
+
+    // textContent only: demo titles are LLM-written, so they never reach innerHTML.
+    function card(slug, { name, tagline }) {
+      const frame = el("iframe", { src: `demos/${slug}/`, loading: "lazy", tabIndex: -1, title: "" });
+      frame.setAttribute("aria-hidden", "true");
+      frame.setAttribute("scrolling", "no");
+      const shot = el("div", { className: "shot" }, frame);
+      resize.observe(shot);
+      const [type, ...place] = tagline.split(/\s+in\s+/i);
+      const facts = el("dl", {},
+        el("dt", { textContent: "Type" }), el("dt", { textContent: "Area" }), el("dt", { textContent: "Status" }),
+        el("dd", { textContent: type }), el("dd", { textContent: place.join(" in ") || "Kochi" }), el("dd", { textContent: "Live" }),
+      );
+      const foot = el("div", { className: "foot" },
+        el("span", { className: "mono", textContent: `/demos/${slug.slice(0, 18)}…` }),
+        el("span", { className: "open", textContent: "Open ↗" }),
+      );
+      return el("a", { className: "glass card", href: `demos/${slug}/`, target: "_blank", rel: "noopener" },
+        shot, el("div", { className: "body" }, el("h3", { textContent: name }), facts, foot));
+    }
+
+    async function loadDemos() {
+      const count = document.getElementById("demo-count");
+      try {
+        const res = await fetch(REPO_DEMOS_API, { headers: { Accept: "application/vnd.github+json" } });
+        const slugs = res.status === 404 ? [] : res.ok ? (await res.json()).filter(f => f.type === "dir").map(f => f.name) : null;
+        if (!slugs) throw new Error(`GitHub ${res.status}`);
+        count.textContent = slugs.length;
+        if (!slugs.length) return note("The first concepts are on their way.");
+        const details = await Promise.all(slugs.map(describe));
+        demos.replaceChildren(...slugs.map((slug, i) => card(slug, details[i])));
+      } catch (err) {
+        console.error("Could not list demos", err);
+        note("The concepts could not load right now. Please refresh in a minute.");
+      }
+    }
+
+    // ---------- lead-qualifying assistant ----------
+    // Scripted questions (no model call): each answer fills one field of the site-request webhook body.
+    const STEPS = [
+      { key: "Business_Name", ask: "Hi! I build free homepage concepts for local businesses. What's your business called?", min: 2 },
+      { key: "Business_Type", ask: "Nice. What kind of business is it?", chips: ["Salon / spa", "Clinic / dentist", "Café / restaurant", "Contractor", "Shop"], min: 2 },
+      { key: "Current_Site", ask: "Do you have a website today?", chips: ["No website", "Only Instagram / Facebook", "Yes, but it's outdated"], min: 2 },
+      { key: "Priority", ask: "What should the new site do best?", chips: ["More calls & WhatsApp", "Online booking", "Show up on Google", "Look premium"], min: 2 },
+      { key: "Name", ask: "Got it. And what's your name?", min: 2 },
+      { key: "Contact", ask: "Last one: best phone, WhatsApp or email to send your concept to?", min: 5, hint: "That looks too short. Could you share a full number or email?" },
+    ];
+    const LABELS = { Business_Name: "Business", Business_Type: "Type", Current_Site: "Website today", Priority: "Priority", Name: "Name", Contact: "Contact" };
+    const log = document.getElementById("log");
+    const chips = document.getElementById("chips");
+    const composer = document.getElementById("composer");
+    const reply = document.getElementById("reply");
+    const sendBtn = composer.querySelector("button");
+    let answers = {};
+    let step = 0;
+
+    const scroll = () => log.scrollTo({ top: log.scrollHeight, behavior: "smooth" });
+    const say = (text, who) => { log.append(el("div", { className: `msg ${who}`, textContent: text })); scroll(); };
+    const setInput = on => { reply.disabled = !on; sendBtn.disabled = !on; if (on) reply.focus({ preventScroll: true }); };
+    const setChips = (list, onPick) => {
+      chips.replaceChildren(...list.map(([label, cls]) => el("button", { type: "button", className: `chip ${cls || ""}`, textContent: label, onclick: () => onPick(label) })));
+      scroll(); // chips shrink the log, so keep the latest message in view
+    };
+
+    async function bot(text) {
+      setInput(false);
+      chips.replaceChildren();
+      const dots = el("div", { className: "msg bot typing", textContent: "•••" });
+      log.append(dots); scroll();
+      await new Promise(r => setTimeout(r, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 550));
+      dots.remove();
+      say(text, "bot");
+    }
+
+    async function ask() {
+      const s = STEPS[step];
+      await bot(s.ask);
+      setChips((s.chips || []).map(c => [c]), answer);
+      setInput(true);
+      reply.placeholder = s.chips ? "Or type your own…" : "Type your answer…";
+    }
+
+    async function answer(raw) {
+      const text = String(raw).trim().slice(0, 200);
+      const s = STEPS[step];
+      if (!text) return;
+      say(text, "me");
+      reply.value = "";
+      if (text.length < s.min) { await bot(s.hint || "Could you tell me a little more?"); setChips((s.chips || []).map(c => [c]), answer); return setInput(true); }
+      answers = { ...answers, [s.key]: text };
+      step += 1;
+      return step < STEPS.length ? ask() : review();
+    }
+
+    async function review() {
+      await bot(`Thanks, ${answers.Name}! Here's what I'll send to Basil:`);
+      log.append(el("dl", { className: "summary" }, ...STEPS.map(s => el("div", {}, el("dt", { textContent: LABELS[s.key] }), el("dd", { textContent: answers[s.key] })))));
+      scroll();
+      setChips([["Send to Basil", "primary"], ["Start over"]], pick => (pick === "Start over" ? restart() : submit()));
+    }
+
+    async function submit() {
+      chips.replaceChildren();
+      const body = {
+        Name: answers.Name,
+        Business_Name: answers.Business_Name,
+        Business_Type: answers.Business_Type,
+        Contact: answers.Contact,
+        Message: `Website today: ${answers.Current_Site}\nPriority: ${answers.Priority}\n(via concept assistant)`,
+        Website: "", // honeypot field of the webhook; always empty from a real visitor
+      };
+      try {
+        const res = await fetch(REQUEST_WEBHOOK, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+        if (!res.ok) throw new Error(`webhook ${res.status}`);
+        window.dataLayer.push({ event: "site_request_submitted", event_category: "lead", event_label: answers.Business_Type });
+        await bot("Sent! Basil will reach out with your concept link, usually within a few days. 🎉");
+        setChips([["Browse live concepts"]], () => document.getElementById("work").scrollIntoView());
+      } catch (err) {
+        console.error("Request failed", err);
+        await bot("Hmm, that didn't go through. You can message Basil directly instead:");
+        chips.replaceChildren(
+          el("a", { className: "chip primary", href: "https://wa.me/919645565454", rel: "noopener", textContent: "WhatsApp" }),
+          el("a", { className: "chip", href: "mailto:hello@basiljose.tech", textContent: "Email" }),
+          el("button", { type: "button", className: "chip", textContent: "Try again", onclick: submit }),
+        );
+        scroll();
+      }
+    }
+
+    function restart() {
+      answers = {};
+      step = 0;
+      log.replaceChildren();
+      ask();
+    }
+
+    composer.addEventListener("submit", event => { event.preventDefault(); answer(reply.value); });
+
+    loadDemos();
+    ask();
   </script>
 </body>
 </html>
