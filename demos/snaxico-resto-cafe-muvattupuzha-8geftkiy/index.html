@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNAXICO Resto Cafe — Muvattupuzha</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg: #141414;
+      --surface: #1E1E1E;
+      --text: #F8FAFC;
+      --accent: #D97706;
+      --border: rgba(255, 255, 255, 0.10);
+    }
+    
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -0.01em;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Syne', sans-serif;
+      letter-spacing: -0.02em;
+    }
+    
+    .border-custom {
+      border: 1px solid var(--border);
+    }
+
+    .border-b-custom {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .border-t-custom {
+      border-top: 1px solid var(--border);
+    }
+
+    .bg-surface {
+      background-color: var(--surface);
+    }
+
+    .text-accent {
+      color: var(--accent);
+    }
+
+    .bg-accent {
+      background-color: var(--accent);
+    }
+
+    .accent-ring:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
+<script>window.dataLayer=window.dataLayer||[];window.dataLayer.push({"client_category":"Cafe","client_name":"SNAXICO Resto Cafe","lead_id":"LEAD-8GEFTKIY"});window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+(function(){
+var dl=window.dataLayer=window.dataLayer||[];
+window.gtag=window.gtag||function(){dl.push(arguments);};
+function track(name,p){var o={event:name};for(var k in p)o[k]=p[k];dl.push(o);}
+document.addEventListener('click',function(e){
+var el=e.target.closest&&e.target.closest('a,button');if(!el)return;
+var href=el.getAttribute('href')||'',label=(el.textContent||'').trim().replace(/\s+/g,' ').slice(0,80);
+var lead={event_category:'lead',event_label:href};
+if(/wa\.me|whatsapp\.com/i.test(href))track('whatsapp_click',lead);
+else if(/^tel:/i.test(href))track('phone_call_click',lead);
+else if(/^mailto:/i.test(href))track('email_click',lead);
+else if(/google\.[a-z.]+\/maps|maps\.google\.|maps\.app\.goo\.gl/i.test(href))track('directions_click',lead);
+else if(el.hasAttribute('data-agent-trigger'))track('ai_agent_open',{event_category:'engagement',event_label:label});
+else if(el.hasAttribute('data-preview-page'))track('preview_page_click',{event_category:'engagement',event_label:el.getAttribute('data-preview-page')});
+else if(el.host&&el.host!==location.host)track('outbound_click',{event_category:'navigation',event_label:href});
+else track('cta_click',{event_category:'engagement',event_label:label,link_url:href});
+},true);
+document.addEventListener('submit',function(e){var f=e.target;track('form_submit',{event_category:'lead',event_label:f.id||f.getAttribute('name')||'form'});},true);
+})();</script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WR7DQZ54"></script>
+</head>
+<body class="min-h-screen relative selection:bg-amber-600 selection:text-white pb-36 md:pb-24">
+
+  <!-- 1. TRUST BAR -->
+  <header class="w-full bg-[#101010] border-b-custom text-xs text-neutral-400 py-2.5 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent shrink-0"></i>
+        <span class="truncate max-w-xs sm:max-w-md">police station Road, Thottumkalpeedika, Muvattupuzha, Keralam 686661</span>
+      </div>
+      <div class="flex items-center gap-5 shrink-0 ml-auto sm:ml-0">
+        <div class="hidden sm:flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-accent shrink-0"></i>
+          <span>Open Daily: 1:00 PM – 12:00 AM</span>
+        </div>
+        <a href="tel:+916282027159" class="inline-flex items-center gap-1.5 text-neutral-200 hover:text-amber-500 font-medium transition-colors">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-accent shrink-0"></i>
+          <span>+91 62820 27159</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. STICKY HEADER -->
+  <nav class="sticky top-0 z-30 w-full backdrop-blur-md bg-[#141414]/90 border-b-custom">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+      <a href="#" class="font-heading text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+        <span>SNAXICO</span>
+        <span class="text-xs px-2 py-0.5 rounded-full border-custom text-amber-400 bg-amber-500/10 font-sans tracking-normal font-semibold">RESTO CAFE</span>
+      </a>
+
+      <!-- Desktop Nav Preview Links -->
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-neutral-300">
+        <button type="button" data-preview-page="About Us" class="preview-nav-link hover:text-white transition-colors">About Us</button>
+        <button type="button" data-preview-page="Services" class="preview-nav-link hover:text-white transition-colors">Services</button>
+        <button type="button" data-preview-page="Gallery" class="preview-nav-link hover:text-white transition-colors">Gallery</button>
+        <button type="button" data-preview-page="Pricing" class="preview-nav-link hover:text-white transition-colors">Pricing</button>
+        <button type="button" data-preview-page="Testimonials" class="preview-nav-link hover:text-white transition-colors">Testimonials</button>
+        <button type="button" data-preview-page="Contact" class="preview-nav-link hover:text-white transition-colors">Contact</button>
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <button type="button" data-agent-trigger class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-md bg-accent text-neutral-950 font-semibold text-xs uppercase tracking-wider hover:bg-amber-500 transition-colors accent-ring">
+          Table Reservation
+        </button>
+        <button type="button" id="mobile-menu-toggle" class="lg:hidden p-2 rounded-md border-custom text-neutral-300 hover:text-white" aria-label="Toggle menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Preview Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t-custom bg-[#1a1a1a] px-4 py-4 space-y-2.5">
+      <button type="button" data-preview-page="About Us" class="preview-nav-link block w-full text-left py-2 text-sm text-neutral-300 hover:text-white">About Us</button>
+      <button type="button" data-preview-page="Services" class="preview-nav-link block w-full text-left py-2 text-sm text-neutral-300 hover:text-white">Services</button>
+      <button type="button" data-preview-page="Gallery" class="preview-nav-link block w-full text-left py-2 text-sm text-neutral-300 hover:text-white">Gallery</button>
+      <button type="button" data-preview-page="Pricing" class="preview-nav-link block w-full text-left py-2 text-sm text-neutral-300 hover:text-white">Pricing</button>
+      <button type="button" data-preview-page="Testimonials" class="preview-nav-link block w-full text-left py-2 text-sm text-neutral-300 hover:text-white">Testimonials</button>
+      <button type="button" data-preview-page="Contact" class="preview-nav-link block w-full text-left py-2 text-sm text-neutral-300 hover:text-white">Contact</button>
+    </div>
+  </nav>
+
+  <!-- 3. HERO SECTION -->
+  <section class="relative pt-16 pb-20 md:pt-28 md:pb-32 px-4 sm:px-6 overflow-hidden">
+    <!-- Ambient subtle background glow -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-amber-600/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <!-- Rating Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border-custom bg-[#1E1E1E]/80 mb-8 backdrop-blur-sm">
+        <div class="flex items-center text-amber-500">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+        </div>
+        <span class="text-xs font-medium text-neutral-200">
+          4.6 rating across 192+ Google reviews
+        </span>
+        <span class="w-1 h-1 rounded-full bg-neutral-600"></span>
+        <span class="text-xs text-neutral-400">Muvattupuzha, Kerala</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.08] mb-6">
+        Elevated Plates. Precision Roasts. Muvattupuzha’s Definitive After-Hours Cafe.
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-neutral-300 font-normal leading-relaxed mb-10">
+        SNAXICO Resto Cafe merges artisanal coffee craft, globally inspired comfort plates, and an intimate dark-mode sanctuary crafted for deep conversations and vibrant late-night gatherings.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button type="button" data-agent-trigger class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-accent text-neutral-950 font-bold text-sm tracking-wide hover:bg-amber-500 transition-colors accent-ring shadow-lg shadow-amber-950/20">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Reserve Table or Slot</span>
+        </button>
+        <a href="tel:+916282027159" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md border-custom bg-[#1E1E1E] text-white font-medium text-sm hover:border-neutral-500 hover:bg-[#252525] transition-colors accent-ring">
+          <i data-lucide="phone-call" class="w-4 h-4 text-accent"></i>
+          <span>Call Now</span>
+        </a>
+      </div>
+
+      <!-- Micro Trust Pillars -->
+      <div class="mt-14 pt-8 border-t-custom grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+        <div class="p-3">
+          <p class="text-xs text-neutral-400 uppercase tracking-wider font-semibold">Service Hours</p>
+          <p class="text-sm font-medium text-white mt-0.5">1:00 PM – Midnight</p>
+        </div>
+        <div class="p-3">
+          <p class="text-xs text-neutral-400 uppercase tracking-wider font-semibold">Cuisine Archetype</p>
+          <p class="text-sm font-medium text-white mt-0.5">Artisanal Plates & Brews</p>
+        </div>
+        <div class="p-3">
+          <p class="text-xs text-neutral-400 uppercase tracking-wider font-semibold">Vibe & Seating</p>
+          <p class="text-sm font-medium text-white mt-0.5">Late-Night Resto Sanctuary</p>
+        </div>
+        <div class="p-3">
+          <p class="text-xs text-neutral-400 uppercase tracking-wider font-semibold">Google Verified</p>
+          <p class="text-sm font-medium text-white mt-0.5">4.6 Stars (192 Reviews)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SERVICES SECTION: VISUAL LOOKBOOK BENTO GRID -->
+  <section class="py-20 md:py-28 px-4 sm:px-6 bg-[#171717] border-t-custom border-b-custom">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-accent font-semibold">Curated Resto Portfolio</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2">
+            The SNAXICO Lookbook & Culinary Offerings
+          </h2>
+        </div>
+        <p class="text-neutral-400 text-sm max-w-md mt-4 md:mt-0">
+          Designed for late-night coffee purists, comfort food lovers, and casual weekend social gatherings in Muvattupuzha.
+        </p>
+      </div>
+
+      <!-- Bento Grid (6 Services) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        
+        <!-- Bento 1: Large Span (Artisan Coffee) -->
+        <div class="md:col-span-2 bg-surface p-7 sm:p-9 rounded-xl border-custom flex flex-col justify-between group hover:border-neutral-500 transition-colors">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-amber-500/10 border-custom flex items-center justify-center text-accent mb-6">
+              <i data-lucide="coffee" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block text-xs uppercase font-semibold text-neutral-400 tracking-wider mb-2">Signature Craft</div>
+            <h3 class="text-2xl font-bold text-white mb-3">Artisan Roasts & Cold Brew Craft</h3>
+            <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+              Single-origin beans pulled with dialed-in extraction profiles to deliver velvety flat whites and crisp cold drips. Every cup is engineered for the nocturnal connoisseur seeking bold, uncompromising flavors.
+            </p>
+          </div>
+          <button type="button" data-preview-page="Artisan Roasts & Cold Brew Craft" class="preview-nav-link inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-accent hover:text-amber-400 transition-colors pt-2">
+            <span>Explore Roast Profiles</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Bento 2: Tall Vertical (Gourmet Plates) -->
+        <div class="md:col-span-1 lg:col-span-2 bg-surface p-7 sm:p-9 rounded-xl border-custom flex flex-col justify-between group hover:border-neutral-500 transition-colors">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-amber-500/10 border-custom flex items-center justify-center text-accent mb-6">
+              <i data-lucide="utensils" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block text-xs uppercase font-semibold text-neutral-400 tracking-wider mb-2">Kitchen Signature</div>
+            <h3 class="text-2xl font-bold text-white mb-3">Gourmet Savory Plates & Tapas</h3>
+            <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+              Globally balanced small plates, loaded cafe sliders, and hand-tossed artisan bites designed for sharing. Crafted fresh to order with locally sourced spices and premium condiments.
+            </p>
+          </div>
+          <button type="button" data-preview-page="Gourmet Savory Plates & Tapas" class="preview-nav-link inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-accent hover:text-amber-400 transition-colors pt-2">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Bento 3: Square (Late Night Ambiance) -->
+        <div class="md:col-span-1 lg:col-span-1 bg-surface p-6 rounded-xl border-custom flex flex-col justify-between group hover:border-neutral-500 transition-colors">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border-custom flex items-center justify-center text-accent mb-5">
+              <i data-lucide="moon" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Midnight Dining Sanctuary</h3>
+            <p class="text-neutral-300 text-xs leading-relaxed mb-4">
+              A serene after-dark escape running right until 12:00 AM daily. Perfect for intimate post-work catchups and midnight road trip stopovers.
+            </p>
+          </div>
+          <button type="button" data-preview-page="Midnight Dining Sanctuary" class="preview-nav-link inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-accent hover:text-amber-400 transition-colors">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Bento 4: Square (Private Bookings) -->
+        <div class="md:col-span-1 lg:col-span-1 bg-surface p-6 rounded-xl border-custom flex flex-col justify-between group hover:border-neutral-500 transition-colors">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border-custom flex items-center justify-center text-accent mb-5">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Private Table & Group Slots</h3>
+            <p class="text-neutral-300 text-xs leading-relaxed mb-4">
+              Dedicated table reservations for birthdays, team celebrations, or creative meetups with bespoke snack platters.
+            </p>
+          </div>
+          <button type="button" data-preview-page="Private Table & Group Slots" class="preview-nav-link inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-accent hover:text-amber-400 transition-colors">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Bento 5: Square (Thick Shakes & Mocktails) -->
+        <div class="md:col-span-1 lg:col-span-1 bg-surface p-6 rounded-xl border-custom flex flex-col justify-between group hover:border-neutral-500 transition-colors">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border-custom flex items-center justify-center text-accent mb-5">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Signature Craft Shakes</h3>
+            <p class="text-neutral-300 text-xs leading-relaxed mb-4">
+              Indulgent signature blends, infused refreshers, and artisanal dairy creations made without artificial shortcuts.
+            </p>
+          </div>
+          <button type="button" data-preview-page="Signature Craft Shakes" class="preview-nav-link inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-accent hover:text-amber-400 transition-colors">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Bento 6: Square (Grab & Go Takeaway) -->
+        <div class="md:col-span-1 lg:col-span-1 bg-surface p-6 rounded-xl border-custom flex flex-col justify-between group hover:border-neutral-500 transition-colors">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border-custom flex items-center justify-center text-accent mb-5">
+              <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Express Curbside Takeaway</h3>
+            <p class="text-neutral-300 text-xs leading-relaxed mb-4">
+              Quick curbside pick-up along police station Road for hot savory platters and fresh roasts ready in minutes.
+            </p>
+          </div>
+          <button type="button" data-preview-page="Express Curbside Takeaway" class="preview-nav-link inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-accent hover:text-amber-400 transition-colors">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. TRUST & LOCATION SECTION -->
+  <section class="py-20 md:py-28 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Real Google Metrics Block -->
+      <div class="p-8 sm:p-10 rounded-2xl bg-surface border-custom mb-16">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-amber-500">
+                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                <i data-lucide="star-half" class="w-5 h-5 fill-current"></i>
+              </div>
+              <span class="text-2xl font-bold text-white">4.6 / 5.0</span>
+            </div>
+            <p class="text-sm text-neutral-300">
+              Verified customer rating drawn from <strong class="text-white font-semibold">192+ authentic Google Reviews</strong> for SNAXICO Resto Cafe.
+            </p>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=SNAXICO+Resto+Cafe+police+station+Road+Thottumkalpeedika+Muvattupuzha+Keralam+686661" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border-custom bg-[#141414] text-xs font-semibold uppercase tracking-wider text-neutral-200 hover:text-white hover:border-neutral-400 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 text-accent"></i>
+            <span>View Verified Google Profile</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sample Testimonials Notice -->
+      <div class="mb-4">
+        <span class="inline-block text-xs uppercase tracking-wider text-neutral-400 bg-neutral-900 px-3 py-1 rounded border-custom">
+          Sample reviews - replaced with your real Google reviews at launch
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div class="p-6 rounded-xl bg-surface border-custom flex flex-col justify-between">
+          <p class="text-sm text-neutral-300 italic mb-6">
+            "The best midnight coffee spot in Muvattupuzha. Warm ambiance, quick bites, and exceptional espresso shots even at 11 PM."
+          </p>
+          <div>
+            <p class="text-sm font-semibold text-white">Rahul K.</p>
+            <p class="text-xs text-neutral-400">Local Foodie • Verified Visit</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-surface border-custom flex flex-col justify-between">
+          <p class="text-sm text-neutral-300 italic mb-6">
+            "SNAXICO has an amazing dark-mode vibe! The savory loaded snacks and shakes are unmatched anywhere along the Thottumkalpeedika stretch."
+          </p>
+          <div>
+            <p class="text-sm font-semibold text-white">Ananya M.</p>
+            <p class="text-xs text-neutral-400">Regular Diner • Verified Visit</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-surface border-custom flex flex-col justify-between">
+          <p class="text-sm text-neutral-300 italic mb-6">
+            "Clean aesthetic, comfortable seating for evening chats, and polite staff. A welcome addition to Muvattupuzha's after-hours scene."
+          </p>
+          <div>
+            <p class="text-sm font-semibold text-white">Deepak Thomas</p>
+            <p class="text-xs text-neutral-400">Traveler • Verified Visit</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location and Hours Detailed Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 rounded-2xl bg-surface border-custom">
+        <div class="lg:col-span-7 flex flex-col justify-between">
+          <div>
+            <span class="text-xs uppercase font-semibold text-accent tracking-widest">Find Our Sanctuary</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 mb-4">Centrally Located in Muvattupuzha</h3>
+            <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+              Situated right on police station Road, Thottumkalpeedika, SNAXICO Resto Cafe is conveniently accessible with hassle-free parking for evening drivers and groups.
+            </p>
+            
+            <div class="space-y-3 mb-8">
+              <div class="flex items-start gap-3 text-sm text-neutral-300">
+                <i data-lucide="map-pin" class="w-4 h-4 text-accent mt-0.5 shrink-0"></i>
+                <span>police station Road, Thottumkalpeedika, Muvattupuzha, Keralam 686661</span>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-neutral-300">
+                <i data-lucide="phone" class="w-4 h-4 text-accent shrink-0"></i>
+                <a href="tel:+916282027159" class="hover:text-white transition-colors">+91 62820 27159</a>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-neutral-300">
+                <i data-lucide="mail" class="w-4 h-4 text-accent shrink-0"></i>
+                <a href="mailto:snaxicorestocafe.in@gmail.com" class="hover:text-white transition-colors">snaxicorestocafe.in@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <a href="https://www.google.com/maps/search/?api=1&query=SNAXICO+Resto+Cafe+police+station+Road+Thottumkalpeedika+Muvattupuzha+Keralam+686661" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-accent text-neutral-950 font-bold text-xs uppercase tracking-wider hover:bg-amber-500 transition-colors accent-ring">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Get Directions</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 border-t-custom lg:border-t-0 lg:border-l-custom lg:pl-8 pt-6 lg:pt-0">
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-neutral-300 mb-4 flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-accent"></i>
+            <span>Weekly Operating Hours</span>
+          </h4>
+          <div class="space-y-2 text-xs">
+            <div class="flex justify-between py-1.5 border-b-custom">
+              <span class="text-neutral-400">Monday</span>
+              <span class="text-white font-medium">1:00 PM – 12:00 AM</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b-custom">
+              <span class="text-neutral-400">Tuesday</span>
+              <span class="text-white font-medium">1:00 PM – 12:00 AM</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b-custom">
+              <span class="text-neutral-400">Wednesday</span>
+              <span class="text-white font-medium">1:00 PM – 12:00 AM</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b-custom">
+              <span class="text-neutral-400">Thursday</span>
+              <span class="text-white font-medium">1:00 PM – 12:00 AM</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b-custom">
+              <span class="text-neutral-400">Friday</span>
+              <span class="text-white font-medium">1:00 PM – 12:00 AM</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b-custom">
+              <span class="text-neutral-400">Saturday</span>
+              <span class="text-white font-medium">1:00 PM – 12:00 AM</span>
+            </div>
+            <div class="flex justify-between py-1.5">
+              <span class="text-neutral-400">Sunday</span>
+              <span class="text-white font-medium">1:00 PM – 12:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. QUOTE SECTION -->
+  <section id="quote-section" class="py-20 md:py-28 px-4 sm:px-6 bg-[#111111] border-t-custom">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase tracking-widest text-accent font-semibold">Custom Web & Digital Architecture</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">
+          Request Your Complete Custom Build
+        </h2>
+        <p class="text-neutral-400 text-sm mt-3">
+          Specially crafted for <strong class="text-white">SNAXICO Resto Cafe</strong>. Turn this concept into your flagship digital asset with online reservations and WhatsApp synchronization.
+        </p>
+      </div>
+
+      <div class="p-8 sm:p-10 rounded-2xl bg-surface border-custom">
+        <form id="quote-form" class="space-y-6">
+          <input type="hidden" name="Lead_ID" value="LEAD-8GEFTKIY">
+          <input type="hidden" name="Business_Name" value="SNAXICO Resto Cafe">
+
+          <div>
+            <label for="owner-name" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">
+              Your Name / Owner Name <span class="text-amber-500">*</span>
+            </label>
+            <input type="text" id="owner-name" name="Owner_Name" required placeholder="e.g. Cafe Manager / Owner" class="w-full px-4 py-3 rounded-lg bg-[#141414] border-custom text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-amber-500 accent-ring">
+          </div>
+
+          <div>
+            <label for="preferred-contact" class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-2">
+              Preferred Contact Channel <span class="text-amber-500">*</span>
+            </label>
+            <input type="text" id="preferred-contact" name="Preferred_Contact" required placeholder="Phone / WhatsApp or email" class="w-full px-4 py-3 rounded-lg bg-[#141414] border-custom text-white placeholder-neutral-500 text-sm focus:outline-none focus:border-amber-500 accent-ring">
+          </div>
+
+          <div>
+            <span class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-3">
+              Select Package Addons
+            </span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+              <label class="flex items-center gap-3 p-3 rounded-lg bg-[#141414] border-custom cursor-pointer hover:border-neutral-500 transition-colors">
+                <input type="checkbox" name="addons" value="Full 5-Page Custom Website" checked class="w-4 h-4 rounded text-amber-600 focus:ring-0 accent-amber-500">
+                <span class="text-neutral-200 text-xs">Full 5-Page Custom Website</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 rounded-lg bg-[#141414] border-custom cursor-pointer hover:border-neutral-500 transition-colors">
+                <input type="checkbox" name="addons" value="WhatsApp Instant Booking Integration" checked class="w-4 h-4 rounded text-amber-600 focus:ring-0 accent-amber-500">
+                <span class="text-neutral-200 text-xs">WhatsApp Instant Booking Integration</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 rounded-lg bg-[#141414] border-custom cursor-pointer hover:border-neutral-500 transition-colors">
+                <input type="checkbox" name="addons" value="Custom Domain & Business Email" class="w-4 h-4 rounded text-amber-600 focus:ring-0 accent-amber-500">
+                <span class="text-neutral-200 text-xs">Custom Domain & Business Email</span>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 rounded-lg bg-[#141414] border-custom cursor-pointer hover:border-neutral-500 transition-colors">
+                <input type="checkbox" name="addons" value="Local Google Maps SEO Boost" class="w-4 h-4 rounded text-amber-600 focus:ring-0 accent-amber-500">
+                <span class="text-neutral-200 text-xs">Local Google Maps SEO Boost</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" id="quote-submit-btn" class="w-full py-4 rounded-lg bg-accent text-neutral-950 font-bold text-sm uppercase tracking-wider hover:bg-amber-500 transition-all flex items-center justify-center gap-2 accent-ring">
+            <span id="btn-text">Send Me a Custom Quote</span>
+            <div id="btn-spinner" class="hidden w-5 h-5 border-2 border-neutral-900 border-t-transparent rounded-full animate-spin"></div>
+          </button>
+        </form>
+
+        <div id="quote-feedback" class="hidden mt-6 text-center"></div>
+
+        <div class="mt-8 pt-6 border-t-custom flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+          <span>Need immediate assistance from the creator?</span>
+          <div class="flex items-center gap-3">
+            <a href="https://wa.me/919645565454?text=Hi%2C%20I%20would%20like%20a%20quote%20for%20the%20SNAXICO%20Resto%20Cafe%20website" class="inline-flex items-center gap-1.5 text-neutral-200 hover:text-white underline">
+              <i data-lucide="message-square" class="w-3.5 h-3.5 text-accent"></i>
+              <span>WhatsApp Basil Jose</span>
+            </a>
+            <span class="text-neutral-600">•</span>
+            <a href="mailto:hello@basiljose.tech" class="inline-flex items-center gap-1.5 text-neutral-200 hover:text-white underline">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-accent"></i>
+              <span>hello@basiljose.tech</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 px-4 sm:px-6 border-t-custom text-xs text-neutral-500 bg-[#0e0e0e]">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 SNAXICO Resto Cafe, Muvattupuzha. All rights reserved.</p>
+      <p>Concept & Full Architecture by <strong class="text-neutral-300">Basil Jose</strong>.</p>
+    </div>
+  </footer>
+
+  <!-- 7. FIXED BOTTOM BANNER -->
+  <aside class="fixed bottom-0 inset-x-0 z-40 backdrop-blur-md bg-[#101010]/95 border-t-custom py-3 px-4 sm:px-6 shadow-2xl">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="text-center sm:text-left text-xs sm:text-sm text-neutral-300">
+        <span class="text-accent font-semibold">Concept built exclusively for SNAXICO Resto Cafe</span> by Basil Jose. Like this look? Unlock all inner pages, your own domain and WhatsApp booking.
+      </div>
+      <button type="button" id="request-full-build-btn" class="shrink-0 px-4 py-2 rounded-md bg-accent text-neutral-950 font-bold text-xs uppercase tracking-wider hover:bg-amber-500 transition-colors accent-ring">
+        Request Full Build
+      </button>
+    </div>
+  </aside>
+
+  <!-- 8. UPGRADE MODAL -->
+  <div id="upgrade-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modal-backdrop" class="absolute inset-0"></div>
+    <div class="relative bg-surface border-custom rounded-2xl max-w-lg w-full p-6 sm:p-8 z-10 shadow-2xl">
+      <button type="button" id="modal-close" class="absolute top-5 right-5 text-neutral-400 hover:text-white p-1 rounded-md border-custom" aria-label="Close modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="w-12 h-12 rounded-lg bg-amber-500/10 border-custom flex items-center justify-center text-accent mb-5">
+        <i data-lucide="sparkles" class="w-6 h-6"></i>
+      </div>
+
+      <h3 id="modal-title" class="text-xl sm:text-2xl font-bold text-white leading-snug mb-3">
+        Full Website Package Preview
+      </h3>
+
+      <p id="modal-text" class="text-sm text-neutral-300 leading-relaxed mb-6">
+        This inner page is part of the full website package for SNAXICO Resto Cafe. Request a quote below to unlock the complete multi-page build.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button type="button" id="modal-quote-btn" class="w-full inline-flex items-center justify-center px-5 py-3 rounded-md bg-accent text-neutral-950 font-bold text-xs uppercase tracking-wider hover:bg-amber-500 transition-colors accent-ring">
+          Request Quote Below
+        </button>
+        <button type="button" id="modal-dismiss-btn" class="w-full inline-flex items-center justify-center px-5 py-3 rounded-md border-custom text-neutral-300 font-medium text-xs uppercase tracking-wider hover:bg-[#252525] transition-colors">
+          Continue Exploring Demo
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. AI BOOKING ASSISTANT -->
+  <!-- Launcher Button -->
+  <button type="button" data-agent-trigger id="assistant-launcher" class="fixed right-5 bottom-24 md:bottom-16 z-40 w-13 h-13 p-3.5 rounded-full bg-accent text-neutral-950 shadow-xl hover:scale-105 transition-all flex items-center justify-center accent-ring" aria-label="Open Booking Concierge">
+    <span class="relative flex h-3 w-3 absolute -top-1 -right-1">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-300"></span>
+    </span>
+    <i data-lucide="bot" class="w-6 h-6"></i>
+  </button>
+
+  <!-- Chat Panel -->
+  <div id="assistant-panel" class="fixed right-4 bottom-24 md:bottom-16 z-50 hidden w-[92vw] sm:w-[380px] rounded-2xl bg-surface border-custom shadow-2xl flex flex-col overflow-hidden" role="dialog" aria-label="Demo Assistant">
+    <!-- Header -->
+    <div class="p-4 bg-[#141414] border-b-custom flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full bg-accent/20 border-custom flex items-center justify-center text-accent">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <div class="text-xs font-bold text-white flex items-center gap-1.5">
+            <span>SNAXICO Concierge</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          </div>
+          <p class="text-[10px] text-neutral-400">Demo assistant - goes live with the full build</p>
+        </div>
+      </div>
+      <button type="button" id="assistant-close" class="text-neutral-400 hover:text-white p-1" aria-label="Close assistant">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="chat-messages" class="p-4 space-y-3.5 h-72 overflow-y-auto text-xs">
+      <!-- Opening Message -->
+      <div class="flex flex-col items-start gap-1">
+        <div class="bg-[#242424] border-custom p-3 rounded-xl rounded-tl-sm text-neutral-200 leading-relaxed max-w-[85%]">
+          Welcome to SNAXICO Resto Cafe. Would you like to reserve a table for tonight, view our chef's signature bites, or connect directly via WhatsApp Concierge?
+        </div>
+        <span class="text-[9px] text-neutral-500 px-1">SNAXICO Agent</span>
+      </div>
+
+      <!-- Quick reply chips -->
+      <div id="quick-chips" class="flex flex-wrap gap-1.5 pt-2">
+        <button type="button" class="quick-chip text-[11px] bg-[#141414] hover:bg-neutral-800 border-custom px-3 py-1.5 rounded-full text-neutral-300 transition-colors">
+          Reserve Table for Tonight
+        </button>
+        <button type="button" class="quick-chip text-[11px] bg-[#141414] hover:bg-neutral-800 border-custom px-3 py-1.5 rounded-full text-neutral-300 transition-colors">
+          View Midnight Specials
+        </button>
+        <button type="button" class="quick-chip text-[11px] bg-[#141414] hover:bg-neutral-800 border-custom px-3 py-1.5 rounded-full text-neutral-300 transition-colors">
+          WhatsApp Concierge
+        </button>
+      </div>
+    </div>
+
+    <!-- Input Form -->
+    <form id="chat-form" class="p-3 bg-[#141414] border-t-custom flex items-center gap-2">
+      <input type="text" id="chat-input" placeholder="Type a message or inquiry..." class="flex-1 bg-[#1E1E1E] border-custom px-3 py-2 rounded-lg text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-amber-500">
+      <button type="submit" class="p-2 rounded-lg bg-accent text-neutral-950 hover:bg-amber-500 transition-colors" aria-label="Send message">
+        <i data-lucide="send" class="w-3.5 h-3.5"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- 10. MOBILE CONTACT BAR (< 768px) -->
+  <div class="md:hidden fixed bottom-12 inset-x-0 z-30 bg-[#161616]/95 border-t-custom p-2 backdrop-blur-md">
+    <div class="grid grid-cols-2 gap-2">
+      <a href="tel:+916282027159" class="flex items-center justify-center gap-2 py-2.5 rounded-md bg-[#222222] border-custom text-white text-xs font-semibold">
+        <i data-lucide="phone" class="w-3.5 h-3.5 text-accent"></i>
+        <span>Call</span>
+      </a>
+      <a href="https://wa.me/916282027159" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-2.5 rounded-md bg-accent text-neutral-950 text-xs font-bold uppercase tracking-wider">
+        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    // Initialize Lucide icons
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+
+    // Helper functions
+    function scrollToQuote() {
+      closeUpgradeModal();
+      closeAssistant();
+      const el = document.getElementById('quote-section');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Modal controls
+    const upgradeModal = document.getElementById('upgrade-modal');
+    const modalText = document.getElementById('modal-text');
+    const modalClose = document.getElementById('modal-close');
+    const modalDismiss = document.getElementById('modal-dismiss-btn');
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const modalQuoteBtn = document.getElementById('modal-quote-btn');
+
+    function openUpgradeModal(pageName) {
+      if (modalText && pageName) {
+        modalText.textContent = `This inner page (${pageName}) is part of the full website package for SNAXICO Resto Cafe. Request a quote below to unlock the complete multi-page build.`;
+      }
+      upgradeModal.classList.remove('hidden');
+    }
+
+    function closeUpgradeModal() {
+      upgradeModal.classList.add('hidden');
+    }
+
+    if (modalClose) modalClose.addEventListener('click', closeUpgradeModal);
+    if (modalDismiss) modalDismiss.addEventListener('click', closeUpgradeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeUpgradeModal);
+    if (modalQuoteBtn) modalQuoteBtn.addEventListener('click', scrollToQuote);
+
+    // Bind preview links
+    document.querySelectorAll('[data-preview-page]').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const page = this.getAttribute('data-preview-page');
+        openUpgradeModal(page);
+      });
+    });
+
+    // Assistant controls
+    const assistantPanel = document.getElementById('assistant-panel');
+    const assistantClose = document.getElementById('assistant-close');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const quickChips = document.getElementById('quick-chips');
+
+    function openAssistant() {
+      assistantPanel.classList.remove('hidden');
+    }
+
+    function closeAssistant() {
+      assistantPanel.classList.add('hidden');
+    }
+
+    document.querySelectorAll('[data-agent-trigger]').forEach(trigger => {
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        openAssistant();
+      });
+    });
+
+    if (assistantClose) assistantClose.addEventListener('click', closeAssistant);
+
+    function addChatMessage(sender, text, isUser = false) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = isUser ? 'flex flex-col items-end gap-1' : 'flex flex-col items-start gap-1';
+      
+      const bubble = document.createElement('div');
+      bubble.className = isUser 
+        ? 'bg-amber-600 text-neutral-950 font-medium p-3 rounded-xl rounded-tr-sm max-w-[85%] text-left'
+        : 'bg-[#242424] border-custom p-3 rounded-xl rounded-tl-sm text-neutral-200 leading-relaxed max-w-[85%] text-left';
+      bubble.textContent = text;
+      
+      const label = document.createElement('span');
+      label.className = 'text-[9px] text-neutral-500 px-1';
+      label.textContent = sender;
+
+      msgDiv.appendChild(bubble);
+      msgDiv.appendChild(label);
+      chatMessages.appendChild(msgDiv);
+
+      if (!isUser) {
+        // Add conversion redirect button below bot reply
+        const actionBtn = document.createElement('button');
+        actionBtn.type = 'button';
+        actionBtn.className = 'mt-1 text-[11px] font-bold text-accent hover:underline flex items-center gap-1';
+        actionBtn.innerHTML = '<span>Request Full Build to Activate</span> &rarr;';
+        actionBtn.onclick = scrollToQuote;
+        msgDiv.appendChild(actionBtn);
+      }
+
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function handleAssistantResponse(userPrompt) {
+      addChatMessage('You', userPrompt, true);
+      setTimeout(() => {
+        addChatMessage('SNAXICO Agent', 'I can take this booking once the full site is live. Request the full build to switch me on.');
+      }, 450);
+    }
+
+    if (quickChips) {
+      quickChips.querySelectorAll('.quick-chip').forEach(chip => {
+        chip.addEventListener('click', function() {
+          const text = this.textContent.trim();
+          handleAssistantResponse(text);
+        });
+      });
+    }
+
+    if (chatForm) {
+      chatForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = chatInput.value.trim();
+        if (query) {
+          handleAssistantResponse(query);
+          chatInput.value = '';
+        }
+      });
+    }
+
+    // Escape listener for modals
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeUpgradeModal();
+        closeAssistant();
+      }
+    });
+
+    // Request Full Build banner button
+    const bannerBtn = document.getElementById('request-full-build-btn');
+    if (bannerBtn) bannerBtn.addEventListener('click', scrollToQuote);
+
+    // Mobile menu collapse toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Quote Form Submit
+    const quoteForm = document.getElementById('quote-form');
+    const quoteSubmitBtn = document.getElementById('quote-submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnSpinner = document.getElementById('btn-spinner');
+    const quoteFeedback = document.getElementById('quote-feedback');
+
+    if (quoteForm) {
+      quoteForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // UI Loading state
+        quoteSubmitBtn.disabled = true;
+        btnText.textContent = "Submitting Inquiry...";
+        btnSpinner.classList.remove('hidden');
+        quoteFeedback.classList.add('hidden');
+
+        // Gather Selected Addons
+        const selectedAddons = [];
+        quoteForm.querySelectorAll('input[name="addons"]:checked').forEach(cb => {
+          selectedAddons.push(cb.value);
+        });
+
+        const payload = {
+          Lead_ID: "LEAD-8GEFTKIY",
+          Business_Name: "SNAXICO Resto Cafe",
+          Owner_Name: document.getElementById('owner-name').value.trim(),
+          Preferred_Contact: document.getElementById('preferred-contact').value.trim(),
+          Selected_Addons: selectedAddons,
+          Demo_URL: window.location.href,
+          Submitted_At: new Date().toISOString()
+        };
+
+        const webhookUrl = "https://n8n.basiljose.tech/webhook/quote-request";
+
+        try {
+          const response = await fetch(webhookUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+          });
+
+          if (response.ok) {
+            // Success State: Replace form with thank you
+            quoteForm.innerHTML = `
+              <div class="py-8 text-center space-y-4">
+                <div class="w-12 h-12 mx-auto rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white">Thank You! Your Request Has Been Logged.</h3>
+                <p class="text-xs text-neutral-300 max-w-md mx-auto">
+                  We'll prepare a tailored quote for the full SNAXICO Resto Cafe multi-page build and reach out via your preferred channel promptly.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <a href="https://wa.me/919645565454?text=${encodeURIComponent("Hi, I would like a quote for the SNAXICO Resto Cafe website")}" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-accent text-neutral-950 font-bold text-xs uppercase tracking-wider">
+                    WhatsApp Basil Jose
+                  </a>
+                  <a href="mailto:hello@basiljose.tech" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border-custom text-neutral-300 text-xs font-semibold">
+                    Email Direct
+                  </a>
+                </div>
+              </div>
+            `;
+          } else {
+            throw new Error("Webhook request failed");
+          }
+        } catch (error) {
+          // Failure State
+          quoteSubmitBtn.disabled = false;
+          btnText.textContent = "Send Me a Custom Quote";
+          btnSpinner.classList.add('hidden');
+          
+          quoteFeedback.innerHTML = `
+            <div class="p-4 rounded-lg bg-red-950/40 border border-red-500/30 text-left">
+              <p class="text-xs text-red-300 font-medium mb-3">That did not go through. Message us directly instead.</p>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://wa.me/919645565454?text=${encodeURIComponent("Hi, I would like a quote for the SNAXICO Resto Cafe website")}" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-accent text-neutral-950 font-bold text-xs">
+                  WhatsApp Agency
+                </a>
+                <a href="mailto:hello@basiljose.tech" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded border-custom text-neutral-200 text-xs">
+                  Email Agency
+                </a>
+              </div>
+            </div>
+          `;
+          quoteFeedback.classList.remove('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
